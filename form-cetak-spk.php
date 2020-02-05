@@ -249,7 +249,7 @@ padding: 5px;
      <p style="font-size:12px" align="center"> Sistem Informasi Umum Kepegawaian BKPP Kota Banjarbaru @2019</p>
    </div>
    <div id="content">
-  <table width="100%" border="0" style=" font-family:Georgia, "Times New Roman", Times, serif">
+  <table width="100%" border="0" style=" font-family:Georgia, Times New Roman, Times, serif">
   <tr>
     <td align="center" style="font-size:24px"><strong><?php echo $surt; ?></strong></td>
   </tr>
@@ -258,7 +258,7 @@ padding: 5px;
   </tr>
 </table>
 
-<table width="100%" border="0" style=" font-family:Georgia, "Times New Roman", Times, serif">
+<table width="100%" border="0" style=" font-family:Georgia, Times New Roman, Times, serif">
   <tr>
     <td width="30%" valign="top">Diberikan Kepada </td>
     <td width="2%" valign="top">:</td>
@@ -319,7 +319,7 @@ padding: 5px;
     			?>
 </table>
 <br>
-<table width="100%" border="0" style=" font-family:Georgia, "Times New Roman", Times, serif">
+<table width="100%" border="0" style=" font-family:Georgia, Times New Roman, Times, serif">
 
   <tr>
     <td width="30%" valign="top">Keperluan </td>
@@ -346,7 +346,7 @@ padding: 5px;
   </tr>
   <tr>
     <td colspan="3" valign="top">
-<table width="100%" border="0" style=" font-family:Georgia, "Times New Roman", Times, serif">
+<table width="100%" border="0" style=" font-family:Georgia, Times New Roman, Times, serif">
       <tr>
         <td width="3%">&nbsp;</td>
         <td width="97%">a. Pembayaran akan dilakukan jika barang - barang tersebut telah diterima dengan baik. </td>
@@ -370,7 +370,7 @@ padding: 5px;
 </table>
 
 
-<table width="100%" border="0" style="font-family:Georgia, "Times New Roman", Times, serif">
+<table width="100%" border="0" style="font-family:Georgia, Times New Roman, Times, serif">
   <tr>
     <td align="center" width="50%">&nbsp;</td>
     <td align="center" width="50%">&nbsp;</td>
