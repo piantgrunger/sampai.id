@@ -1,4 +1,4 @@
-<?
+<?php
 $query = "select * from skpd where status='Kosong' order by jab_order";
 $hasil = mysqli_query($conn,$query);
 $kategori = array();

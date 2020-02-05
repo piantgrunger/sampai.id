@@ -1,4 +1,4 @@
-<?PHP
+<?php
 include "assets/include/session.php";
 include "assets/include/koneksi.php";
 $yearsnow	= date("Y");
@@ -171,7 +171,7 @@ $yearsnow	= date("Y");
                                         <div class="col-sm-9">
                                            <select name="id_pejabat" class="select2 form-control custom-select" style="width: 100%; height:36px;">
 										   <option value="<?php echo $id_pegawai; ?>"><?php echo $nama; ?></option>
-                                           			<?
+                                           			<?php
 													include "assets/combo/pegawai_.php";
 													for ($i=0;$i<$count;$i++)
 													{

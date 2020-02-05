@@ -1,4 +1,4 @@
-<?PHP
+<?php
 include "assets/include/session.php";
 include "assets/include/koneksi.php";
 
@@ -131,7 +131,7 @@ include "assets/include/koneksi.php";
                                         <label for="lname" class="col-sm-3 text-right control-label col-form-label">Unit Kerja/Instansi</label>
                                         <div class="col-sm-9">
                                           <select name="unitkerja" class="select2 form-control custom-select" required style="width: 100%; height:36px;">
-                                           			<?
+                                           			<?php
 													include "assets/combo/nama_skpd.php";
 													for ($i=0;$i<$count;$i++)
 													{

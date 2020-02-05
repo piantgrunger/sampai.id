@@ -1,4 +1,4 @@
-<?
+<?php
 include('koneksi.php');
 //$year					= date("d-m-Y");
 $t_now					= date("d");

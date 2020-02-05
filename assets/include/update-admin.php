@@ -1,4 +1,4 @@
-<?PHP
+<?php
 include("koneksi.php");
 
 	$id_user		= $_POST['id_user'];

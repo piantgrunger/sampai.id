@@ -1,4 +1,4 @@
-<?
+<?php
 $query = "select * from unit_sppd order by nama";
 $hasil = mysqli_query($conn,$query);
 $kategori = array();

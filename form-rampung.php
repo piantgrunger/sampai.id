@@ -308,7 +308,7 @@ function rupiah_2($angka){
   </tr>
   </thead>
   <tbody>
-  <?
+  <?php
 				 	$i 			= 1;
               	 	$jml_data1 	= "SELECT * FROM rampung where id_sppd='$id_sppd' order by klasifikasi ";
 					$query		= mysqli_query($conn, $jml_data1);

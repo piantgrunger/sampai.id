@@ -1,4 +1,4 @@
-<?PHP
+<?php
 include "assets/include/session-persediaan.php";
 include "assets/include/koneksi.php";
 
@@ -92,7 +92,7 @@ include "assets/include/koneksi.php";
                 <!-- ============================================================== -->
                   <div class="card">
                             <div class="card-body">
-								<?PHP
+								<?php
 									if (isset($_GET['pesan'])){
 									$pesan = $_GET['pesan'];
 									$isi = $_GET['isi'];
@@ -122,7 +122,7 @@ include "assets/include/koneksi.php";
 											</tr>
                                         </thead>
                                         <tbody>
-										<?
+										<?php
 				 	$i 			= 1;
               	 	$jml_data1 	= "SELECT * FROM distributor order by distributor ";
 					$query		= mysqli_query($conn, $jml_data1);
@@ -141,7 +141,7 @@ include "assets/include/koneksi.php";
                                                 <td><strong><?php echo $distributor; ?></strong> <BR> <?php echo $nama_pemilik; ?></td>
 												<td> <?php echo $alamat; ?></a></td>
 												 <td><strong><?php echo $npwp; ?></strong> <BR> <?php echo $rek_bank; ?></td>
-												 <td> <? echo ( "<a href=Assets/Include/Hapus-Distributor.php?id=$data[0] title='Hapus Data Distributor'> <i class='mdi mdi-delete-empty'></i> </a>")?>				</td>
+												 <td> <?php echo ( "<a href=Assets/Include/Hapus-Distributor.php?id=$data[0] title='Hapus Data Distributor'> <i class='mdi mdi-delete-empty'></i> </a>")?>				</td>
 										  </tr>
               
               

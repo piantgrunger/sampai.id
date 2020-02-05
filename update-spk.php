@@ -1,4 +1,4 @@
-<?PHP
+<?php
 include "assets/include/session-sub-bidang.php";
 include "assets/include/koneksi.php";
 $id_spk = $_GET['kd'];
@@ -157,7 +157,7 @@ $yearsnow					= date("Y");
                                          <div class="col-sm-9">
                                             <select class="col-sm-9 select2 form-control custom-select" name="id_distributor">
 											<option value="<?php echo $id_distributor_; ?>"> <?php  echo $nama_dis;?></option>
-														 <?PHP
+														 <?php
 															include "assets/combo/distributor.php";
 															for ($i=0;$i<$count;$i++)
 															{
@@ -172,7 +172,7 @@ $yearsnow					= date("Y");
                                         <div class="col-sm-9">
                                            <select class="select2 form-control custom-select" name="id_klasifikasi">
 										   <option value="<?php echo $klasifikasi_surat; ?>"> <?php echo $klasifikasi_surat; ?> ---> <?php  echo $nama_klasifikasi;?></option>
-													<?
+													<?php
 													include "assets/combo/kode-surat.php";
 													for ($i=0;$i<$count;$i++)
 													{
@@ -292,7 +292,7 @@ $yearsnow					= date("Y");
                                         <div class="col-sm-9">
                                            <select class="select2 form-control custom-select" name="id_jabatan">
 										   <option value="<?php echo $id_pejabat_1; ?>" ><?php  echo $nama_pej;?></option>
-														 <?PHP
+														 <?php
 															include "assets/combo/pptk.php";
 															for ($i=0;$i<$count;$i++)
 															{

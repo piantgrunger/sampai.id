@@ -1,4 +1,4 @@
-<?PHP
+<?php
 include "assets/include/session.php";
 include "assets/include/koneksi.php";
 
@@ -93,7 +93,7 @@ include "assets/include/koneksi.php";
                   <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title">Data Unit Kerja </h5>
-								<?PHP
+								<?php
 									if (isset($_GET['pesan'])){
 									$pesan = $_GET['pesan'];
 									$isi = $_GET['isi'];
@@ -124,7 +124,7 @@ include "assets/include/koneksi.php";
                                             </tr>
                                         </thead>
                                         <tbody>
-										<?
+										<?php
 				 	$i 			= 1;
               	 	$jml_data1 	= "SELECT * FROM skpd order by nama_skpd ";
 					$query		= mysqli_query($conn, $jml_data1);
@@ -148,9 +148,9 @@ include "assets/include/koneksi.php";
 												<div class="btn-group">
 													<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action</button>
 													<div class="dropdown-menu">
-													    <? echo ( "<a class='dropdown-item' href=update-instansi.php?KODE=$data[0] title='Edit Data Pegawai'> <i class='mdi mdi-pencil'></i> Edit Data</a>")?> 
+													    <?php echo ( "<a class='dropdown-item' href=update-instansi.php?KODE=$data[0] title='Edit Data Pegawai'> <i class='mdi mdi-pencil'></i> Edit Data</a>")?> 
 														  <div class="dropdown-divider"></div>
-														  <? echo ( "<a class='dropdown-item' href=hapus-instansi.php?KODE=$data[0] title='Hapus Data'> <i class='mdi mdi-delete-empty'></i> Hapus Data</a>")?> 
+														  <?php echo ( "<a class='dropdown-item' href=hapus-instansi.php?KODE=$data[0] title='Hapus Data'> <i class='mdi mdi-delete-empty'></i> Hapus Data</a>")?> 
 													 
 													</div>
 												</div><!-- /btn-group -->

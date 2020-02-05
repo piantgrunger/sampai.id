@@ -286,7 +286,7 @@ padding: 5px;
     <th width="70%" valign="top">Nama dan Spesifikasi Barang </th>
     <th width="25%" valign="top">Banyaknya</th>
   </tr>
-  <?
+  <?php
 				 	$i 			= 1;
               	 	$jml_data1 	= "SELECT * FROM belanja_barang where id_spk='$id_spk' order by id_barang ";
 					$query		= mysqli_query($conn, $jml_data1);
@@ -311,7 +311,7 @@ padding: 5px;
   <tr>
     <td valign="top" align="center"><?php echo $i ?></td>
     <td valign="top"><?php echo $nama_barang; ?> <?php echo $keterangan; ?></td>
-    <td valign="top"><?php echo $qty;?> <?  echo $satuan;  ?></td>
+    <td valign="top"><?php echo $qty;?> <?php  echo $satuan;  ?></td>
   </tr>
    <?php
        			 $i++;

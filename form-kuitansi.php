@@ -112,7 +112,7 @@ function rupiah_2($angka){
 ?>
 
 
-<?
+<?php
 					$jml_data1 	= "SELECT * FROM sppd where id_sppd='$id_sppd'  ";
 					$query		= mysqli_query($conn, $jml_data1);
 		

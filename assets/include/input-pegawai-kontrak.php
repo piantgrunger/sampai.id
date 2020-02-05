@@ -1,4 +1,4 @@
-<?
+<?php
 include('koneksi.php');
 if (isset($_POST['nama2'])){
 				$allowed_ext	= array('doc', 'docx', 'xls', 'xlsx', 'ppt', 'pptx', 'pdf', 'rar', 'zip', 'jpg', 'jpeg', 'gif', 'png');

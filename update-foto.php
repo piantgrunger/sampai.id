@@ -1,4 +1,4 @@
-<?PHP
+<?php
 include "assets/include/session.php";
 include "assets/include/koneksi.php";
 
@@ -96,7 +96,7 @@ include "assets/include/koneksi.php";
                                 <h4 class="card-title m-b-0">Detail Pegawai</h4>
                             </div>
                             <div class="comment-widgets scrollable">
-				<?
+				<?php
 						$KODE			= $_GET['KODE'];
 						$sql			= "select * from pegawai where id_pegawai='$KODE'";
 						$sql_2 			= mysqli_query($conn, $sql);
@@ -147,16 +147,16 @@ include "assets/include/koneksi.php";
 				?>
                     <!-- Column -->
                    <div class="d-flex flex-row comment-row m-t-0">
-                                    <div class="p-2"><img  src="assets/include/<? echo $lokasi; ?>" alt="<?PHP echo $nama_pegawai; ?>" height="200" width="200" class="rounded-circle" > </div>
+                                    <div class="p-2"><img  src="assets/include/<?php echo $lokasi; ?>" alt="<?php echo $nama_pegawai; ?>" height="200" width="200" class="rounded-circle" > </div>
                                     <div class="comment-text w-100">
                                         <h6 class="font-medium"><strong><?php echo $nama1 ?>  <?php echo $nama2 ?> <?php echo $nama3 ?> </strong></h6>
                                         <span class="m-b-15 d-block"><?php echo $nanana ?> <?php echo $nipp ?></span>
-										<span class="m-b-15 d-block"><?PHP echo $n_golongan; ?></span>
-										<span class="m-b-15 d-block"><?PHP echo $jabatan; ?></span>
-										<span class="m-b-15 d-block"><?PHP echo $alamat; ?></span>
-										<span class="m-b-15 d-block"><?PHP echo $no_telp; ?></span>
+										<span class="m-b-15 d-block"><?php echo $n_golongan; ?></span>
+										<span class="m-b-15 d-block"><?php echo $jabatan; ?></span>
+										<span class="m-b-15 d-block"><?php echo $alamat; ?></span>
+										<span class="m-b-15 d-block"><?php echo $no_telp; ?></span>
                                         <div class="comment-footer">
-                                            <span class="text-muted float-right"><?PHP echo $nama_pegawai; ?></span> 
+                                            <span class="text-muted float-right"><?php echo $nama_pegawai; ?></span> 
                                             <button type="button" class="btn btn-primary btn-sm">Update Foto</button>
                                             <button type="button" class="btn btn-success btn-sm">Update Data Pegawai</button>
                                             <button type="button" class="btn btn-cyan btn-sm">Cetak Kartu Pegawai</button>
@@ -179,7 +179,7 @@ include "assets/include/koneksi.php";
                                         <label for="cono1" class="col-sm-3 text-right control-label col-form-label">Upload Foto Pegawai</label>
                                         <div class="col-sm-9">
                                             <div class="custom-file">
-											<input type="hidden" name="id_pegawai" class="form-control" id="fname"  placeholder="Gelar Depan" 					value="<? echo $KODE; ?>" >
+											<input type="hidden" name="id_pegawai" class="form-control" id="fname"  placeholder="Gelar Depan" 					value="<?php echo $KODE; ?>" >
 
                                             <input name="file" type="file" class="custom-file-input" id="validatedCustomFile" required>
                                             <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>

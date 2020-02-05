@@ -1,4 +1,4 @@
-<?
+<?php
 $query = "select * from jabatan where id_esselon != '8' order by id_esselon";
 $hasil = mysqli_query($conn,$query);
 $jabatan = array();

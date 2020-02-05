@@ -1,4 +1,4 @@
-<?
+<?php
 	include "assets/include/koneksi.php";
 	$nama_kantor 	= $_GET['KODE'];
 	$sql_u			= "select * from pegawai where id_pegawai='$nama_kantor'";

@@ -1,4 +1,4 @@
-<?
+<?php
 $query = "select id_jabatan,jabatan from jabatan where id_skpd='$id_skpd'  order by parent_id, jab_order ";
 $hasil = mysqli_query($conn,$query);
 $kategori = array();

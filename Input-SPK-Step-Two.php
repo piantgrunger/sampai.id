@@ -1,4 +1,4 @@
-<?PHP
+<?php
 include "assets/include/session-sub-bidang.php";
 include "assets/include/koneksi.php";
 $id_distributor 			= $_POST['id_distributor'];
@@ -128,7 +128,7 @@ $yearsnow					= date("Y");
                                         <label for="lname" class="col-sm-3 text-right control-label col-form-label">Klasifikasi</label>
                                         <div class="col-sm-9">
                                            <select class="select2 form-control custom-select" name="id_klasifikasi">
-													<?
+													<?php
 													include "assets/combo/kode-surat.php";
 													for ($i=0;$i<$count;$i++)
 													{

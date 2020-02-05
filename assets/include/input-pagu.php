@@ -1,4 +1,4 @@
-<?
+<?php
 include('koneksi.php');
 
 $id_unit_org_sppd 			= $_POST['id_unit_org_sppd'];

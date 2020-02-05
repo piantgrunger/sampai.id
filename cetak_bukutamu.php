@@ -75,7 +75,7 @@ $yearsnow	= date("Y");
   ?>
 </table>
 
-DICETAK PADA : <?PHP echo $localtime;?>
+DICETAK PADA : <?php echo $localtime;?>
 	  </div>
 </div>
 

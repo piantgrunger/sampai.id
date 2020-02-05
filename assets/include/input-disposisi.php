@@ -201,7 +201,7 @@ window.print();
 </head>
 
 <body>
-<?
+<?php
 
 	$id_suratmasuk	= $_POST['id_suratmasuk'];
 	$unitkerja		= $_POST['unitkerja'];
@@ -269,28 +269,28 @@ window.print();
     <td width="95%" valign="top"><table width="100%" border="1" id="table" cellspacing="0">
       <tr>
         <td width="30%">Index : </td>
-        <td width="40%">Kode : <strong><?PHP echo $kode_srt; ?></strong></td>
-        <td width="40%">Nomor Agenda : <strong><?PHP echo $no_agenda; ?></strong></td>
+        <td width="40%">Kode : <strong><?php echo $kode_srt; ?></strong></td>
+        <td width="40%">Nomor Agenda : <strong><?php echo $no_agenda; ?></strong></td>
       </tr>
       <tr>
-        <td colspan="3">Isi Ringkas : <strong><?PHP echo $perihal; ?></strong></td>
+        <td colspan="3">Isi Ringkas : <strong><?php echo $perihal; ?></strong></td>
         </tr>
       <tr>
-        <td colspan="3">Dari : <strong><?PHP echo $asal_surat; ?></strong></td>
+        <td colspan="3">Dari : <strong><?php echo $asal_surat; ?></strong></td>
         </tr>
       <tr>
-        <td valign="top">Tanggal Surat : <br /><strong><?PHP echo $tgl_awal; ?></strong></td>
-        <td valign="top">Nomor Surat : <br /><strong><?PHP echo $no_surat; ?></strong></td>
+        <td valign="top">Tanggal Surat : <br /><strong><?php echo $tgl_awal; ?></strong></td>
+        <td valign="top">Nomor Surat : <br /><strong><?php echo $no_surat; ?></strong></td>
         <td valign="top">Lampiran : </td>
       </tr>
       <tr>
-        <td valign="top">Diteruskan Kepada : <strong><?PHP echo $nama_unit; ?></strong></td>
-        <td valign="top">Tanggal Diteruskan : <strong><?PHP echo $tgl_awal; ?></strong></td>
+        <td valign="top">Diteruskan Kepada : <strong><?php echo $nama_unit; ?></strong></td>
+        <td valign="top">Tanggal Diteruskan : <strong><?php echo $tgl_awal; ?></strong></td>
         <td valign="top">Tanda Terima : <br /><br /><br /></td>
       </tr>
       <tr>
         <td valign="top">D i s p o s i s i :</td>
-        <td colspan="2" valign="top"><strong><?PHP echo $a1; ?></strong></td>
+        <td colspan="2" valign="top"><strong><?php echo $a1; ?></strong></td>
         </tr>
 		 <tr>
         <td valign="top">&nbsp;</td>

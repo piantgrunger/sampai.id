@@ -1,4 +1,4 @@
-<?
+<?php
 $query = "select * from pegawai order by level";
 $hasil = mysqli_query($conn,$query);
 $kategori = array();

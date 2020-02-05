@@ -1,4 +1,4 @@
-<?PHP
+<?php
 include "assets/include/session.php";
 include "assets/include/koneksi.php";
 $yearsnow	= date("Y");
@@ -123,7 +123,7 @@ function rupiah_2($angka){
                                         <label for="cono1" class="col-sm-3 text-right control-label col-form-label">Pagu SPPD</label>
                                         <div class="col-sm-9">
                                             <select name="id_unit_org_sppd" class="select2 form-control custom-select" required style="width: 100%; height:36px;">
-                                           			<?
+                                           			<?php
 													include "assets/combo/unit_org_sppd.php";
 													for ($i=0;$i<$count;$i++)
 													{
@@ -181,7 +181,7 @@ function rupiah_2($angka){
                   <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title">Pagu Perjalanan Dinas Tahun <?php echo $yearsnow; ?> </h5> 
-								<?PHP
+								<?php
 									if (isset($_GET['pesan'])){
 									$pesan = $_GET['pesan'];
 									$isi = $_GET['isi'];
@@ -211,7 +211,7 @@ function rupiah_2($angka){
                                             </tr>
                                         </thead>
                                         <tbody>
-										<?
+										<?php
 										$yearsnow	= date("Y");
 				 	$i 			= 1;
               	 	$jml_data1 	= "SELECT * FROM pagu_sppd where tahun ='$yearsnow' order by id_unit_sppd ";

@@ -1,4 +1,4 @@
-<?
+<?php
 $query0 = "select * from pimpinan order by id_pimpinan";
 $hasil0 = mysqli_query($conn,$query0);
 $kategori0 = array();

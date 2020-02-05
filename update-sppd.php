@@ -1,4 +1,4 @@
-<?PHP
+<?php
 include "assets/include/session.php";
 include "assets/include/koneksi.php";
 $yearsnow	= date("Y");
@@ -45,7 +45,7 @@ $hasil_31	= $pecah1[2];
 													$data_kk 	= mysqli_fetch_array($sql_kk);
 													$n_golongan	= $data_kk['nama'];
 ?>
-	<?
+	<?php
 						//$KODE			= $_GET['KODE'];
 						$sql			= "select * from pegawai where id_pegawai='$id_pegawai'";
 						$sql_2 			= mysqli_query($conn, $sql);
@@ -221,7 +221,7 @@ $hasil_31	= $pecah1[2];
 									
 										<select name="id_perjalanan" class="select2 form-control custom-select" required style="width: 100%; height:36px;">
 										<option value="<?php echo $pd_jenis;?>"><?php echo $pd_jenis;?></option>
-                                           			<?
+                                           			<?php
 													include "assets/combo/jenis-pd.php";
 													for ($i=0;$i<$count;$i++)
 													{
@@ -360,7 +360,7 @@ $hasil_31	= $pecah1[2];
                                         <div class="col-sm-9">
                                             <select name="id_unit_org_sppd" class="select2 form-control custom-select" required style="width: 100%; height:36px;">
 											<option value="<?php echo $n_golongan; ?>"><?php echo $n_golongan; ?></option>
-                                           			<?
+                                           			<?php
 													include "assets/combo/unit_org_sppd.php";
 													for ($i=0;$i<$count;$i++)
 													{

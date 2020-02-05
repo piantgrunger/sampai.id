@@ -1,4 +1,4 @@
-<?PHP
+<?php
 include "assets/include/session.php";
 include "assets/include/koneksi.php";
 
@@ -66,7 +66,7 @@ window.print();
  
 <body id="wrapper" >
       <p>
-        <?
+        <?php
 	 
 	  					$id_pegawai 	= $_GET['KODE'];
 	  					$sql			= "select * from pegawai where id_pegawai='$id_pegawai'";
@@ -141,10 +141,10 @@ window.print();
 	  ?>
       <table width="85%" border="0" id="dul" align="center"  >
   <tr>
-    <td  align="center"><a href="#" onclick="Print()" class="link"><img src="assets/images/logo-kotabaru.png"  width="55" height="80" /></a><BR /><BR /><b><? echo $namakantor;?></b><BR /><BR /></td>
+    <td  align="center"><a href="#" onclick="Print()" class="link"><img src="assets/images/logo-kotabaru.png"  width="55" height="80" /></a><BR /><BR /><b><?php echo $namakantor;?></b><BR /><BR /></td>
   </tr>
   <tr>
-    <td align="center"><a href = "javascript:history.back()"> <img src="assets/include/<? echo $lokasi;?>" border="1"  id="cek" width="130" height="165"></a></td>
+    <td align="center"><a href = "javascript:history.back()"> <img src="assets/include/<?php echo $lokasi;?>" border="1"  id="cek" width="130" height="165"></a></td>
   </tr>
   <tr>
     <td align="center"></td>
@@ -174,7 +174,7 @@ window.print();
     <td>&nbsp;</td>
     <td valign="top">Nama</td>
     <td valign="top">:</td>
-    <td valign="top"><b><? echo $namalengkap; ?></b></td>
+    <td valign="top"><b><?php echo $namalengkap; ?></b></td>
     <td>&nbsp;</td>
   </tr>
  
@@ -182,35 +182,35 @@ window.print();
     <td>&nbsp;</td>
     <td valign="top">NIP</td>
     <td valign="top">:</td>
-    <td valign="top"><? echo $nip; ?></td>
+    <td valign="top"><?php echo $nip; ?></td>
     <td>&nbsp;</td>
   </tr>
   <tr>
     <td>&nbsp;</td>
     <td valign="top">Jabatan</td>
     <td valign="top">:</td>
-    <td valign="top"><? echo $jabatan; ?></td>
+    <td valign="top"><?php echo $jabatan; ?></td>
     <td>&nbsp;</td>
   </tr>
   <tr>
     <td>&nbsp;</td>
     <td valign="top">Pangkat</td>
     <td valign="top">:</td>
-    <td valign="top"><? echo $golongan; ?></td>
+    <td valign="top"><?php echo $golongan; ?></td>
     <td>&nbsp;</td>
   </tr>
   <tr>
     <td>&nbsp;</td>
     <td valign="top">Gol.  Darah </td>
     <td valign="top">:</td>
-    <td valign="top"><? echo $gol_darah; ?></td>
+    <td valign="top"><?php echo $gol_darah; ?></td>
     <td>&nbsp;</td>
   </tr>
   <tr>
     <td>&nbsp;</td>
     <td valign="top">Alamat </td>
     <td valign="top">:</td>
-    <td valign="top"><? echo $alamat; ?></td>
+    <td valign="top"><?php echo $alamat; ?></td>
     <td>&nbsp;</td>
   </tr>
   <tr>
@@ -224,7 +224,7 @@ window.print();
     <td valign="top">&nbsp;</td>
     <td valign="top">Dikeluarkan</td>
     <td valign="top">:</td>
-    <td valign="top"><?PHP
+    <td valign="top"><?php
 
 //Array Hari
 $array_hari = array(1=>"Senin","Selasa","Rabu","Kamis","Jumat", "Sabtu","Minggu");
@@ -264,7 +264,7 @@ echo $t_date;
   </tr>
   <tr>
     <td>&nbsp;</td>
-    <td colspan="3" align="center"><a href="#" onclick="Print()" class="link"><img src="assets/include/<? echo $lokasi_ttd;?>" width="180"  /></a> <br /><img src="assets/ee.png" width="180" height="10"  /></td>
+    <td colspan="3" align="center"><a href="#" onclick="Print()" class="link"><img src="assets/include/<?php echo $lokasi_ttd;?>" width="180"  /></a> <br /><img src="assets/ee.png" width="180" height="10"  /></td>
     <td>&nbsp;</td>
   </tr>
 </table>

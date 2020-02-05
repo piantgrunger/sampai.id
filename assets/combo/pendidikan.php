@@ -1,4 +1,4 @@
-<?
+<?php
 $query = "select * from pendidikan order by pendidikan";
 $hasil = mysqli_query($conn,$query);
 $kategori = array();

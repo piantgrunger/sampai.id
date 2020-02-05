@@ -1,4 +1,4 @@
-<?
+<?php
 include('session.php');
 include('koneksi.php');
 $id_pegawai 			= $_GET['KODE'];

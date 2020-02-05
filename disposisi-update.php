@@ -1,4 +1,4 @@
-<?PHP
+<?php
 include "assets/include/session.php";
 include "assets/include/koneksi.php";
 $yearsnow	= date("Y");
@@ -190,7 +190,7 @@ $asal_surat				= $data__['asal_surat'];
                                         <label for="email1" class="col-sm-3 text-right control-label col-form-label">Disposisi Kepada</label>
                                         <div class="col-sm-9">
                                               <select name="unitkerja" class="select2 form-control custom-select" style="width: 100%; height:36px;">
-                                           			<?
+                                           			<?php
 													include "assets/combo/unit_org.php";
 													for ($i=0;$i<$count;$i++)
 													{

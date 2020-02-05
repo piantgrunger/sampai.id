@@ -1,4 +1,4 @@
-<?PHP
+<?php
 include "assets/include/session.php";
 include "assets/include/koneksi.php";
 $yearsnow	= date("Y");
@@ -178,7 +178,7 @@ $yearsnow	= date("Y");
                                         <label for="email1" class="col-sm-3 text-right control-label col-form-label">Kode Surat</label>
                                         <div class="col-sm-9">
                                              <select name="kd_surat" class="select2 form-control custom-select" style="width: 100%; height:36px;">
-                                           			<?
+                                           			<?php
 													include "assets/combo/kode-surat.php";
 													for ($i=0;$i<$count;$i++)
 													{

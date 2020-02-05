@@ -1,4 +1,4 @@
-<?PHP
+<?php
 include "assets/include/koneksi.php";
 
 ?>
@@ -151,7 +151,7 @@ include "assets/include/koneksi.php";
                                         <div class="col-sm-9">
                                             <select class="select2 form-control custom-select" name="id_petugas">
 														 <option>Saat ini anda di layani oleh :</option>
-														 <?PHP
+														 <?php
 															include "assets/combo/petugas.php";
 															for ($i=0;$i<$count;$i++)
 															{

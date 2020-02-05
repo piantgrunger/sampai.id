@@ -1,4 +1,4 @@
-<?PHP
+<?php
 include "assets/include/session-sub-bidang.php";
 include "assets/include/koneksi.php";
 $id_spk 			= $_GET['KODE'];
@@ -128,7 +128,7 @@ function rupiah_2($angka){
              <div class="page-breadcrumb">
                 <div class="row">
                     <div class="col-12 d-flex no-block align-items-center">
-                        <h4 class="page-title">Belanja Barang <? echo ( "<a href=form-cetak-spk.php?id=$id_spk title='Cetak Surat Perintah Kerja'> <i class='mdi mdi-printer'></i></a>")?> </h4>
+                        <h4 class="page-title">Belanja Barang <?php echo ( "<a href=form-cetak-spk.php?id=$id_spk title='Cetak Surat Perintah Kerja'> <i class='mdi mdi-printer'></i></a>")?> </h4>
                         <div class="ml-auto text-right">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
@@ -162,7 +162,7 @@ function rupiah_2($angka){
                                         <label for="cono1" class="col-sm-3 text-right control-label col-form-label">Nama Barang</label>
                                        <div class="col-sm-9">
                                              <select class="select2 form-control custom-select" name="id_barang">
-														 <?PHP
+														 <?php
 															include "assets/combo/barang.php";
 															for ($i=0;$i<$count;$i++)
 															{
@@ -221,7 +221,7 @@ function rupiah_2($angka){
                                             </tr>
                                         </thead>
                                         <tbody>
-										<?
+										<?php
 				 	$i 			= 1;
               	 	$jml_data1 	= "SELECT * FROM belanja_barang where id_spk='$id_spk' order by id_barang ";
 					$query		= mysqli_query($conn, $jml_data1);
@@ -247,10 +247,10 @@ function rupiah_2($angka){
 				 <tr>
                                                 <td><?php echo $i ?></td>
                                                 <td><strong><?php echo $nama_barang; ?> <?php echo $keterangan; ?></strong></td>
-												<td> <?php echo $qty;?> <?  echo $satuan;  ?></td>
+												<td> <?php echo $qty;?> <?php  echo $satuan;  ?></td>
 												<td align="right"> <?php echo rupiah_2($harga); ?></td>
 												<td align="right"> <?php echo rupiah_2($jumlah); ?></td>
-												<td><? echo ( "<a href=Assets/Include/Hapus-Belanja.php?id=$data[0] title='Hapus Data Belanja'> <i class='mdi mdi-delete-empty'></i> </a>")?></td>
+												<td><?php echo ( "<a href=Assets/Include/Hapus-Belanja.php?id=$data[0] title='Hapus Data Belanja'> <i class='mdi mdi-delete-empty'></i> </a>")?></td>
                   </tr>
               
               

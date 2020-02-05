@@ -75,7 +75,7 @@ $localtime		= date("d-m-Y, g:i a");
 	  <BR />
 	  PADA BADAN KEPEGAWAIAN, PENDIDIKAN DAN PELATIHAN KOTA BANJARBARU
 	   <BR />
-	   BULAN <?PHP echo $n_bulan; ?> TAHUN  <?PHP echo $tahun; ?>
+	   BULAN <?php echo $n_bulan; ?> TAHUN  <?php echo $tahun; ?>
 	  </h1>
 	  <?php
 	 
@@ -127,7 +127,7 @@ $localtime		= date("d-m-Y, g:i a");
   ?>
 </table>
 
-DICETAK PADA : <?PHP echo $localtime;?>
+DICETAK PADA : <?php echo $localtime;?>
 	  </div>
 </div>
 

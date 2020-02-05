@@ -1,4 +1,4 @@
-<?
+<?php
 $query = "select * from surat_rekomendasi where status ='Aktif'";
 $hasil = mysqli_query($conn,$query);
 $kategori = array();

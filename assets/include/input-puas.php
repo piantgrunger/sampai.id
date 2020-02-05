@@ -1,4 +1,4 @@
-<?
+<?php
 include('koneksi.php');
 
 	$radio			= $_POST['radio'];

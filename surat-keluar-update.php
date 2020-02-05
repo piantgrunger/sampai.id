@@ -1,4 +1,4 @@
-<?PHP
+<?php
 include "assets/include/session.php";
 include "assets/include/koneksi.php";
 $yearsnow				= date("Y");
@@ -150,7 +150,7 @@ $hasil_3	= $pecah[2];
                                         <div class="col-sm-9">
                                              <select name="id_klasifikasi" class="select2 form-control custom-select" style="width: 100%; height:36px;">
 											  <option value="<?php echo $kode_srt; ?>"><?php echo $kode_srt; ?></option>
-                                           			<?
+                                           			<?php
 													include "assets/combo/kode-surat.php";
 													for ($i=0;$i<$count;$i++)
 													{
@@ -208,7 +208,7 @@ $hasil_3	= $pecah[2];
                                         <div class="col-sm-9">
                                             <select name="id_unitkerja" class="select2 form-control custom-select" style="width: 100%; height:36px;">
 											<option value="<?php echo $id_unitkerja; ?>"><?php echo $nama_unit; ?></option>
-                                           			<?
+                                           			<?php
 													include "assets/combo/unit_org.php";
 													for ($i=0;$i<$count;$i++)
 													{

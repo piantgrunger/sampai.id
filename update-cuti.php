@@ -1,4 +1,4 @@
-<?PHP
+<?php
 include "assets/include/session.php";
 include "assets/include/koneksi.php";
 $yearsnow	= date("Y");
@@ -103,7 +103,7 @@ $yearslast2	= $yearsnow - 2;
                                 <h4 class="card-title m-b-0">Data Pegawai </h4>
                             </div>
                             <div class="comment-widgets scrollable">
-						<?
+						<?php
 						$id_ambil_cuti				= $_GET['id'];
 						//echo $id_ambil_cuti;
 						$sql_cuti_ 					="select * from cuti where id_ambil_cuti='$id_ambil_cuti' ";
@@ -192,14 +192,14 @@ $yearslast2	= $yearsnow - 2;
 				?>
                     <!-- Column -->
                    <div class="d-flex flex-row comment-row m-t-0">
-                                    <div class="p-2"><img  src="assets/include/<? echo $lokasi; ?>" alt="<?PHP echo $nama_pegawai; ?>" height="150" width="150" class="rounded-circle" > </div>
+                                    <div class="p-2"><img  src="assets/include/<?php echo $lokasi; ?>" alt="<?php echo $nama_pegawai; ?>" height="150" width="150" class="rounded-circle" > </div>
                                     <div class="comment-text w-100">
                                         <h6 class="font-medium"><strong><?php echo $nama1 ?>  <?php echo $nama2 ?> <?php echo $nama3 ?> </strong></h6>
                                         <span class="m-b-15 d-block"><?php echo $nanana ?> <?php echo $nipp ?></span>
-										<span class="m-b-15 d-block"><?PHP echo $n_golongan; ?></span>
-										<span class="m-b-15 d-block"><?PHP echo $jabatan; ?></span>
-										<span class="m-b-15 d-block"><?PHP echo $alamat; ?></span>
-										<span class="m-b-15 d-block"><?PHP echo $no_telp; ?></span>
+										<span class="m-b-15 d-block"><?php echo $n_golongan; ?></span>
+										<span class="m-b-15 d-block"><?php echo $jabatan; ?></span>
+										<span class="m-b-15 d-block"><?php echo $alamat; ?></span>
+										<span class="m-b-15 d-block"><?php echo $no_telp; ?></span>
                                       
                                     </div>
                                 </div>
@@ -428,7 +428,7 @@ $yearslast2	= $yearsnow - 2;
 
 										<select name="id_cuti" class="select2 form-control custom-select" required style="width: 100%; height:36px;">
 										<option value="<?php echo $id_cuti_ ?>"><?php echo $nama_cuti; ?></option>
-                                           			<?
+                                           			<?php
 													include "assets/combo/jenis-cuti.php";
 													for ($i=0;$i<$count;$i++)
 													{
@@ -441,20 +441,20 @@ $yearslast2	= $yearsnow - 2;
 									<div class="form-group row">
                                         <label for="cono1" class="col-sm-3 text-right control-label col-form-label">Alasan Cuti</label>
                                         <div class="col-sm-9">
-                                            <textarea name="alasan" class="form-control"><?PHP echo $alasan; ?></textarea>
+                                            <textarea name="alasan" class="form-control"><?php echo $alasan; ?></textarea>
                                         </div>
                                     </div>
 									 <div class="form-group row">
                                         <label for="lname" class="col-sm-3 text-right control-label col-form-label">Lama Cuti</label>
                                         <div class="col-sm-9">
-                                            <input type="text" name="lama_cuti" class="form-control" id="lname" maxlength="2" value="<?PHP echo $lama_cuti; ?>" placeholder="Lama Cuti">
+                                            <input type="text" name="lama_cuti" class="form-control" id="lname" maxlength="2" value="<?php echo $lama_cuti; ?>" placeholder="Lama Cuti">
                                         </div>
                                     </div>
 									 <div class="form-group row">
                                         <label for="lname" class="col-sm-3 text-right control-label col-form-label">Tanggal Mulai</label>
                                         <div class="col-sm-3">
                                             <select name="tgl" class="select2 form-control custom-select" required style="width: 100%; height:36px;">
-                                           		<option  value="<?PHP echo $tgl_1; ?>"><?PHP echo $tgl_1; ?></option>
+                                           		<option  value="<?php echo $tgl_1; ?>"><?php echo $tgl_1; ?></option>
 												<?php
 												for($a=1; $a<=31; $a+=1){
 													echo"<option value=$a> $a </option>";
@@ -464,7 +464,7 @@ $yearslast2	= $yearsnow - 2;
                                         </div>
 										<div class="col-sm-3">
                                             <select name="bln" class="select2 form-control custom-select" required style="width: 100%; height:36px;">
-                                           		<option value="<?PHP echo $bln_1; ?>"><?PHP echo $bln_1; ?></option>
+                                           		<option value="<?php echo $bln_1; ?>"><?php echo $bln_1; ?></option>
 												<?php
 												$bulan=array("Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember");
 												$jlh_bln=count($bulan);
@@ -476,7 +476,7 @@ $yearslast2	= $yearsnow - 2;
                                         </div>
 										<div class="col-sm-3">
                                             <select name="thn" class="select2 form-control custom-select" required style="width: 100%; height:36px;">
-                                           		<option value="<?PHP echo $tahun_1; ?>"><?PHP echo $tahun_1; ?></option>
+                                           		<option value="<?php echo $tahun_1; ?>"><?php echo $tahun_1; ?></option>
 												<?php
 												for($i=$yearsnow; $i>=2000; $i-=1){
 												echo"<option value=$i> $i </option>";
@@ -489,7 +489,7 @@ $yearslast2	= $yearsnow - 2;
                                         <label for="lname" class="col-sm-3 text-right control-label col-form-label">Tanggal Akhir</label>
                                         <div class="col-sm-3">
                                             <select name="tgl1" class="select2 form-control custom-select" required style="width: 100%; height:36px;">
-                                           		<option value="<?PHP echo $tgl_2; ?>"><?PHP echo $tgl_2; ?></option>
+                                           		<option value="<?php echo $tgl_2; ?>"><?php echo $tgl_2; ?></option>
 												<?php
 												for($a=1; $a<=31; $a+=1){
 													echo"<option value=$a> $a </option>";
@@ -499,7 +499,7 @@ $yearslast2	= $yearsnow - 2;
                                         </div>
 										<div class="col-sm-3">
                                             <select name="bln1" class="select2 form-control custom-select" required style="width: 100%; height:36px;">
-                                           		<option value="<?PHP echo $bln_12; ?>"><?PHP echo $bln_2; ?></option>
+                                           		<option value="<?php echo $bln_12; ?>"><?php echo $bln_2; ?></option>
 												<?php
 												$bulan=array("Januari","Februari","Maret","April","Mei","Juni","Juli","Agustus","September","Oktober","November","Desember");
 												$jlh_bln=count($bulan);
@@ -511,7 +511,7 @@ $yearslast2	= $yearsnow - 2;
                                         </div>
 										<div class="col-sm-3">
                                             <select name="thn1" class="select2 form-control custom-select" required style="width: 100%; height:36px;">
-                                           		<option value="<?PHP echo $tahun_2; ?>"><?PHP echo $tahun_2; ?></option>
+                                           		<option value="<?php echo $tahun_2; ?>"><?php echo $tahun_2; ?></option>
 												<?php
 												for($i=$yearsnow; $i>=2000; $i-=1){
 												echo"<option value=$i> $i </option>";
@@ -523,13 +523,13 @@ $yearslast2	= $yearsnow - 2;
 									<div class="form-group row">
                                         <label for="cono1" class="col-sm-3 text-right control-label col-form-label">Alamat Cuti</label>
                                         <div class="col-sm-9">
-                                            <textarea name="alamat_cuti" class="form-control"><?PHP echo $alamat_cuti; ?></textarea>
+                                            <textarea name="alamat_cuti" class="form-control"><?php echo $alamat_cuti; ?></textarea>
                                         </div>
                                     </div>
 									 <div class="form-group row">
                                         <label for="lname" class="col-sm-3 text-right control-label col-form-label">No Telp </label>
                                         <div class="col-sm-9">
-                                            <input type="text" name="telp" class="form-control" id="lname" maxlength="50" value="<?PHP echo $telp; ?>" placeholder="No Telp">
+                                            <input type="text" name="telp" class="form-control" id="lname" maxlength="50" value="<?php echo $telp; ?>" placeholder="No Telp">
                                         </div>
                                     </div>
 									

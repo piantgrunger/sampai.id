@@ -1,4 +1,4 @@
-<?PHP
+<?php
 include "assets/include/session.php";
 include "assets/include/koneksi.php";
 
@@ -96,7 +96,7 @@ $yearsnow	= date("Y");
                   <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title">Data SPPD Tahun <?php echo $yearsnow; ?> <a href="cetak-data-pegawai.php"><button type="button" class="btn btn-primary btn-sm"><i class='mdi mdi-printer'></i> Cetak Data </button> </a></h5> 
-								<?PHP
+								<?php
 									if (isset($_GET['pesan'])){
 									$pesan = $_GET['pesan'];
 									$isi = $_GET['isi'];
@@ -181,7 +181,7 @@ $yearsnow	= date("Y");
                                                 <td><?php echo $i ?></td>
                                                 <td>
 												<strong>
-												 <?PHP
+												 <?php
 												  if ($gelar_blk =='')
 												  {
 												  $namalengkap	= $gelar_dpn;
@@ -258,15 +258,15 @@ $yearsnow	= date("Y");
 												<div class="btn-group">
 													<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action </button>
 													<div class="dropdown-menu">
-													  <?= ( "<a class='dropdown-item' href=form-sppd.php?id=$data[0] title='Cetak SPPD'> <i class='mdi mdi-printer'></i> Cetak SPPD</a>")?> 
-													  <?= ( "<a class='dropdown-item' href=panjar-sppd.php?id=$data[0] title='Uang Panjar'> <i class='mdi mdi-calculator'></i> Panjar</a>")?>
-													  <?= ( "<a class='dropdown-item' href=rampung-sppd.php?id=$data[0] title='SPPD Ranpung'> <i class='mdi mdi-checkbox-marked-outline'></i> SPJ Rampung</a>")?>
-													  <?= ( "<a class='dropdown-item' href=riil-sppd.php?id=$data[0] title='SPPD Ranpung'> <i class='mdi mdi-cart-outline'></i> Pengeluaran Riil</a>")?>
-													  <?= ( "<a class='dropdown-item' href=form-rampung.php?id=$data[0] title='SPPD Ranpung'> <i class='mdi mdi-printer'></i> Cetak Rampung</a>")?>
-													  <?= ( "<a class='dropdown-item' href=form-pengeluaran-riil.php?id=$data[0] title='Pengeluaraan Riil'> <i class='mdi mdi-printer'></i> Cetak Pengeluaran Riil</a>")?>
-													  <?= ( "<a class='dropdown-item' href=form-kuitansi.php?id=$data[0] title='Kuitansi'> <i class='mdi mdi-printer'></i> Cetak Kuitansi</a>")?>
+													  <?php echo ( "<a class='dropdown-item' href=form-sppd.php?id=$data[0] title='Cetak SPPD'> <i class='mdi mdi-printer'></i> Cetak SPPD</a>")?> 
+													  <?php echo ( "<a class='dropdown-item' href=panjar-sppd.php?id=$data[0] title='Uang Panjar'> <i class='mdi mdi-calculator'></i> Panjar</a>")?>
+													  <?php echo ( "<a class='dropdown-item' href=rampung-sppd.php?id=$data[0] title='SPPD Ranpung'> <i class='mdi mdi-checkbox-marked-outline'></i> SPJ Rampung</a>")?>
+													  <?php echo ( "<a class='dropdown-item' href=riil-sppd.php?id=$data[0] title='SPPD Ranpung'> <i class='mdi mdi-cart-outline'></i> Pengeluaran Riil</a>")?>
+													  <?php echo ( "<a class='dropdown-item' href=form-rampung.php?id=$data[0] title='SPPD Ranpung'> <i class='mdi mdi-printer'></i> Cetak Rampung</a>")?>
+													  <?php echo ( "<a class='dropdown-item' href=form-pengeluaran-riil.php?id=$data[0] title='Pengeluaraan Riil'> <i class='mdi mdi-printer'></i> Cetak Pengeluaran Riil</a>")?>
+													  <?php echo ( "<a class='dropdown-item' href=form-kuitansi.php?id=$data[0] title='Kuitansi'> <i class='mdi mdi-printer'></i> Cetak Kuitansi</a>")?>
 													  
-													  <?= ( "<a class='dropdown-item' href=update-sppd.php?id=$data[0] title='Edit Data SPPD'> <i class='mdi mdi-pencil'></i> Update SPPD</a>")?> 
+													  <?php echo ( "<a class='dropdown-item' href=update-sppd.php?id=$data[0] title='Edit Data SPPD'> <i class='mdi mdi-pencil'></i> Update SPPD</a>")?> 
 
 
 													  
@@ -274,10 +274,10 @@ $yearsnow	= date("Y");
 													  if ($status=="Proses")
 														{
 													  ?>
-													     <?= ( "<a class='dropdown-item' href=assets/include/Setuju-Cuti.php?id=$id_ambil_cuti title='Form Cuti Disetujui'> <i class='mdi mdi-checkbox-marked-circle-outline'></i> Setuju </a>")?> 
-													     <?= ( "<a class='dropdown-item' href=update-cuti.php?id=$id_ambil_cuti title='Edit Data Cuti'> <i class='mdi mdi-pencil'></i> Update Cuti</a>")?> 
+													     <?php echo ( "<a class='dropdown-item' href=assets/include/Setuju-Cuti.php?id=$id_ambil_cuti title='Form Cuti Disetujui'> <i class='mdi mdi-checkbox-marked-circle-outline'></i> Setuju </a>")?> 
+													     <?php echo ( "<a class='dropdown-item' href=update-cuti.php?id=$id_ambil_cuti title='Edit Data Cuti'> <i class='mdi mdi-pencil'></i> Update Cuti</a>")?> 
 													     <div class="dropdown-divider"></div>
-													      <?= ( "<a class='dropdown-item' href=assets/include/Hapus-Cuti.php?id=$id_ambil_cuti title='Hapus Data'> <i class='mdi mdi-delete-empty'></i> Hapus Data</a>")?> 
+													      <?php echo ( "<a class='dropdown-item' href=assets/include/Hapus-Cuti.php?id=$id_ambil_cuti title='Hapus Data'> <i class='mdi mdi-delete-empty'></i> Hapus Data</a>")?> 
 													 <?php
 														}
 														else

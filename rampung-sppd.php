@@ -1,4 +1,4 @@
-<?PHP
+<?php
 include "assets/include/session.php";
 include "assets/include/koneksi.php";
 $yearsnow	= date("Y");
@@ -252,7 +252,7 @@ function rupiah_2($angka){
 			 <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title">SPJ Rampung Perjalanan Dinas Nomor : 090/<?php echo $no_sppd_;?>/SPD/UM/<?php echo $tahun_; ?> </h5> 
-								<?PHP
+								<?php
 									if (isset($_GET['pesan'])){
 									$pesan = $_GET['pesan'];
 									$isi = $_GET['isi'];
@@ -284,7 +284,7 @@ function rupiah_2($angka){
                                             </tr>
                                         </thead>
                                         <tbody>
-										<?
+										<?php
 				 	$i 					= 1;
               	 	$queryku 			= "SELECT * FROM rampung where id_sppd ='$id_sppd' order by klasifikasi ";
 					$mysql_query		= mysqli_query($conn, $queryku);
@@ -318,7 +318,7 @@ function rupiah_2($angka){
                                                 <td><?php echo rupiah_2($jumlah); ?></td>
 												<td><strong><?php echo $keterangan;?></strong></td>
 												<td>
-												<? echo ( "<a class='dropdown-item' href=assets/include/Hapus-Rampung.php?id=$id_rampung title='Hapus Data'> <i class='mdi mdi-delete-empty'></i></a>")?>												</td>
+												<?php echo ( "<a class='dropdown-item' href=assets/include/Hapus-Rampung.php?id=$id_rampung title='Hapus Data'> <i class='mdi mdi-delete-empty'></i></a>")?>												</td>
                                           </tr>
               
 										 <?php

@@ -209,8 +209,9 @@ function rupiah_2($angka){
                     <div class="col-12 d-flex no-block align-items-center">
                         <h4 class="page-title">
 						<?php 
-						if ($jumlah_select_peg != 0) 
+						if (isset($jumlah_select_peg)) 
 						{
+
 						?>
 						Selamat Ulang Tahun 
 						<?php
@@ -254,7 +255,7 @@ function rupiah_2($angka){
                 <!-- ============================================================== -->
              	 <div class="card">
                 <div class="card-body">
-							                                <h5 class="card-title">Data Agenda Tanggal <?php echo $tgl_now; ?> <?php echo $select_pegawai; ?></h5> 
+							                                <h5 class="card-title">Data Agenda Tanggal <?php echo $tgl_now; ?> <?php echo isset($select_pegawai)?$select_pegawai:""; ?></h5> 
 
 					<div class="row">
 					<?php				
@@ -365,7 +366,7 @@ function rupiah_2($angka){
 								</h6>
 								<h6 class="text-white">
 								 DI HADIRI OLEH : <strong>
-												 <?PHP
+												 <?php
 												  if ($gelar_blk =='')
 												  {
 												  $namalengkap	= $gelar_dpn;
@@ -406,7 +407,7 @@ function rupiah_2($angka){
 					 
                    
                 </div>
-								<?PHP
+								<?php
 									if (isset($_GET['pesan'])){
 									$pesan = $_GET['pesan'];
 									$isi = $_GET['isi'];
@@ -475,7 +476,7 @@ function rupiah_2($angka){
 									
 								
 								?>
-								 <?PHP
+								 <?php
 								 ?>
                                   <h4 class="alert-heading">
 								  <?php 

@@ -1,4 +1,4 @@
-<?PHP
+<?php
 include "assets/include/session.php";
 include "assets/include/koneksi.php";
 
@@ -96,7 +96,7 @@ include "assets/include/koneksi.php";
                                 <h4 class="card-title m-b-0">Detail Admin </h4>
                             </div>
                             <div class="comment-widgets scrollable">
-				<?
+				<?php
 							$KODE			= $_GET['KODE'];
 							$sql_utama		= "select * from users where id='$KODE'";
 							$sql_2 			= mysqli_query($conn, $sql_utama);
@@ -111,7 +111,7 @@ include "assets/include/koneksi.php";
 				
                     <!-- Column -->
                    <div class="d-flex flex-row comment-row m-t-0">
-                                    <div class="p-2"><img  src="assets/include/<? echo $lokasi; ?>" alt="<?PHP echo $nama; ?>" height="200" width="200" class="rounded-circle" > </div>
+                                    <div class="p-2"><img  src="assets/include/<?php echo $lokasi; ?>" alt="<?php echo $nama; ?>" height="200" width="200" class="rounded-circle" > </div>
                                     <div class="comment-text w-100">
                                         <h6 class="font-medium"><strong><?php echo $nama ?>  </strong></h6>
                                         <span class="m-b-15 d-block"><?php echo $email ?> </span>
@@ -133,7 +133,7 @@ include "assets/include/koneksi.php";
                                         <label for="cono1" class="col-sm-3 text-right control-label col-form-label">Upload Foto Pegawai</label>
                                         <div class="col-sm-9">
                                             <div class="custom-file">
-											<input type="hidden" name="id_user" class="form-control" id="fname"  placeholder="Gelar Depan" 					value="<? echo $KODE; ?>" >
+											<input type="hidden" name="id_user" class="form-control" id="fname"  placeholder="Gelar Depan" 					value="<?php echo $KODE; ?>" >
 
                                             <input name="file" type="file" class="custom-file-input" id="validatedCustomFile" required>
                                             <label class="custom-file-label" for="validatedCustomFile">Choose file...</label>

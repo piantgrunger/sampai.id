@@ -1,11 +1,11 @@
-<?PHP
+<?php
 include "assets/include/session.php";
 include "assets/include/koneksi.php";
 $yearsnow	= date("Y");
 $yearslast	= $yearsnow - 1;
 $yearslast2	= $yearsnow - 2;
 ?>
-	<?
+	<?php
 						$KODE			= $_GET['KODE'];
 						$sql			= "select * from pegawai where id_pegawai='$KODE'";
 						$sql_2 			= mysqli_query($conn, $sql);
@@ -186,7 +186,7 @@ $yearslast2	= $yearsnow - 2;
 										<input type="hidden" name="id_atasan" class="form-control" id="lname" value="<?php echo $id_atasan; ?>" >
 										<input type="hidden" name="no_sppd" class="form-control" id="lname" value="<?php echo  $new_code;?>" >
 										<select name="id_perjalanan" class="select2 form-control custom-select" required style="width: 100%; height:36px;">
-                                           			<?
+                                           			<?php
 													include "assets/combo/jenis-pd.php";
 													for ($i=0;$i<$count;$i++)
 													{
@@ -323,7 +323,7 @@ $yearslast2	= $yearsnow - 2;
                                         <label for="cono1" class="col-sm-3 text-right control-label col-form-label">Pagu SPPD</label>
                                         <div class="col-sm-9">
                                             <select name="id_unit_org_sppd" class="select2 form-control custom-select" required style="width: 100%; height:36px;">
-                                           			<?
+                                           			<?php
 													include "assets/combo/unit_org_sppd.php";
 													for ($i=0;$i<$count;$i++)
 													{

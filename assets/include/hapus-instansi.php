@@ -1,4 +1,4 @@
-<?PHP
+<?php
 include("koneksi.php");
 $id_skpd = $_GET['KODE'];
 

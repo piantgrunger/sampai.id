@@ -1,4 +1,4 @@
-<?
+<?php
 $query = "select * from tbl_klasifikasi order by kode";
 $hasil = mysqli_query($conn,$query);
 $kategori = array();

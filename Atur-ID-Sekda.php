@@ -1,4 +1,4 @@
-<?PHP
+<?php
 include "assets/include/session.php";
 include "assets/include/koneksi.php";
 
@@ -133,10 +133,10 @@ include "assets/include/koneksi.php";
                         <div class="col-lg-3 col-md-6">
                         <div class="card">
                             <div class="el-card-item">
-                                <div class="el-card-avatar el-overlay-1"> <img src="assets/include/<? echo $lokasi_ttd;?>" alt="user" />
+                                <div class="el-card-avatar el-overlay-1"> <img src="assets/include/<?php echo $lokasi_ttd;?>" alt="user" />
                                     <div class="el-overlay">
                                         <ul class="list-style-none el-info">
-                                            <li class="el-item"><a class="btn default btn-outline image-popup-vertical-fit el-link" href="assets/include/<? echo $lokasi_ttd;?>" target="_blank"><i class="mdi mdi-magnify-plus"></i></a></li>
+                                            <li class="el-item"><a class="btn default btn-outline image-popup-vertical-fit el-link" href="assets/include/<?php echo $lokasi_ttd;?>" target="_blank"><i class="mdi mdi-magnify-plus"></i></a></li>
                                             <li class="el-item"><a class="btn default btn-outline el-link" href="javascript:void(0);"><i class="mdi mdi-link"></i></a></li>
                                         </ul>
                                     </div>

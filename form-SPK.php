@@ -372,7 +372,7 @@ function rupiah_2($angka){
                                             </tr>
                                         </thead>
                                         <tbody>
-										<?
+										<?php
 				 	$i 			= 1;
               	 	$jml_data1 	= "SELECT * FROM belanja_barang where id_spk='$id_spk' order by id_barang ";
 					$query		= mysqli_query($conn, $jml_data1);
@@ -397,10 +397,10 @@ function rupiah_2($angka){
 				 <tr>
                                                 <td><?php echo $i ?></td>
                                                 <td><strong><?php echo $nama_barang; ?></strong></td>
-												<td> <?php echo $qty;?> <?  echo $satuan;  ?></a></td>
+												<td> <?php echo $qty;?> <?php  echo $satuan;  ?></a></td>
 												<td align="right"> <?php echo rupiah_2($harga); ?></a></td>
 												<td align="right"> <?php echo rupiah_2($jumlah); ?></a></td>
-												<td> <? echo ( "<a href=Assets/Include/Hapus-Belanja.php?KODE=$data[0] title='Hapus Data Belanja'> <i class='mdi mdi-delete-empty'></i> </a>")?>				</td>
+												<td> <?php echo ( "<a href=Assets/Include/Hapus-Belanja.php?KODE=$data[0] title='Hapus Data Belanja'> <i class='mdi mdi-delete-empty'></i> </a>")?>				</td>
                   </tr>
               
               

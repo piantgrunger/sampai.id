@@ -1,4 +1,4 @@
-<?PHP
+<?php
 include("koneksi.php");
 
 	$id_suratkeluar		= $_POST['id_suratkeluar'];

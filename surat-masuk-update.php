@@ -1,4 +1,4 @@
-<?PHP
+<?php
 include "assets/include/session.php";
 include "assets/include/koneksi.php";
 $yearsnow	= date("Y");
@@ -182,7 +182,7 @@ $sql_000	= "select * from tbl_klasifikasi where id_klasifikasi='$kd_surat'";
                                              <select name="kd_surat" class="select2 form-control custom-select" style="width: 100%; height:36px;">
 											 
 											 <option value="<?php echo $kode_srt; ?>"><?php echo $kode_srt; ?></option>
-                                           			<?
+                                           			<?php
 													include "assets/combo/kode-surat.php";
 													for ($i=0;$i<$count;$i++)
 													{

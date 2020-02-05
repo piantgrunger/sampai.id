@@ -1,4 +1,4 @@
-<?PHP
+<?php
 include "assets/include/session-sub-bidang.php";
 include "assets/include/koneksi.php";
 
@@ -103,7 +103,7 @@ include "assets/include/koneksi.php";
                                         <label for="fname" class="col-sm-3 text-right control-label col-form-label">Pilih Distributor </label>
                                          <div class="col-sm-9">
                                             <select class="col-sm-9 select2 form-control custom-select" name="id_distributor">
-														 <?PHP
+														 <?php
 															include "assets/combo/distributor.php";
 															for ($i=0;$i<$count;$i++)
 															{

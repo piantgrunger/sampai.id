@@ -1,4 +1,4 @@
-<?PHP
+<?php
 include("koneksi.php");
 				
 				$allowed_ext	= array('doc', 'docx', 'xls', 'xlsx', 'ppt', 'pptx', 'pdf', 'rar', 'zip', 'jpg', 'jpeg', 'gif', 'png');

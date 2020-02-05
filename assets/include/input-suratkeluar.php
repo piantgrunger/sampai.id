@@ -1,4 +1,4 @@
-<?
+<?php
 include('koneksi.php');
 if (isset($_POST['no_surat'])){
 				$allowed_ext	= array('doc', 'docx', 'xls', 'xlsx', 'ppt', 'pptx', 'pdf', 'rar', 'zip', 'jpg', 'jpeg', 'gif', 'png');

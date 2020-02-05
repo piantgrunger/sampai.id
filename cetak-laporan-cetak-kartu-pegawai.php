@@ -40,7 +40,7 @@ $localtime		= date("d-m-Y, g:i a");
 	  <BR />
 	  PADA PEMERINTAH KABUPATEN KOTABARU
 	   <BR />
-	   Per   <?PHP echo $localtime; ?>
+	   Per   <?php echo $localtime; ?>
 	  </h1>
 	
 	  	<table width="100%" border="1">
@@ -54,7 +54,7 @@ $localtime		= date("d-m-Y, g:i a");
                                                 <th width="20%">TANGGAL CETAK / ADMIN </th>
                                             </tr>
                                         </thead>
-  <?
+  <?php
 				 	$i 			= 1;
               	 	$jml_data1 	= "SELECT * FROM cetak order by tgl ";
 					$query		= mysqli_query($conn, $jml_data1);
@@ -119,7 +119,7 @@ $localtime		= date("d-m-Y, g:i a");
   ?>
 </table>
 
-DICETAK PADA : <?PHP echo $localtime;?>
+DICETAK PADA : <?php echo $localtime;?>
 	  </div>
 </div>
 

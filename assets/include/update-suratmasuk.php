@@ -140,7 +140,7 @@ window.print();
 </head>
 
 <body>
-<?
+<?php
 
 				
 			
@@ -303,22 +303,22 @@ window.print();
   <tr>
     <td width="20%">Perihal</td>
     <td width="1%">:</td>
-    <td width="79%"><?PHP echo $a1; ?></td>
+    <td width="79%"><?php echo $a1; ?></td>
   </tr>
   <tr>
     <td>Surat Dari </td>
     <td>:</td>
-    <td><?PHP echo $asal_surat; ?></td>
+    <td><?php echo $asal_surat; ?></td>
   </tr>
   <tr>
     <td>Tanggal Surat </td>
     <td>:</td>
-    <td><?PHP echo $tgl_awal; ?></td>
+    <td><?php echo $tgl_awal; ?></td>
   </tr>
   <tr>
     <td>Nomor Surat </td>
     <td>:</td>
-    <td><?PHP echo $no_surat; ?></td>
+    <td><?php echo $no_surat; ?></td>
   </tr>
 </table>
 
@@ -327,16 +327,16 @@ window.print();
     <td width="30%" valign="middle" align="left">
 	<table width="100%" border="0" id="table_11" cellspacing="0">
   <tr>
-    <td width="50%" align="center" valign="middle">Kode Surat : <strong><?PHP echo $kode_srt; ?></strong><br /></td>
+    <td width="50%" align="center" valign="middle">Kode Surat : <strong><?php echo $kode_srt; ?></strong><br /></td>
     <td width="50%" align="center">No Agenda : </td>
   </tr>
   <tr>
-   <td width= align="center" valign="middle" style="color:#FFFFFF; background-color:#333333"><strong>Sifat : <?PHP echo $sifat; ?></strong></td>
-    <td align="center" valign="middle" style="font-size:20px"><strong><?PHP echo $no_agenda; ?></strong></td>
+   <td width= align="center" valign="middle" style="color:#FFFFFF; background-color:#333333"><strong>Sifat : <?php echo $sifat; ?></strong></td>
+    <td align="center" valign="middle" style="font-size:20px"><strong><?php echo $no_agenda; ?></strong></td>
   </tr>
   
   <tr>
-   <td colspan="2" align="center" valign="middle">Tanggal Diterima : <strong><?PHP echo $tgl_ajuan; ?></strong></td>
+   <td colspan="2" align="center" valign="middle">Tanggal Diterima : <strong><?php echo $tgl_ajuan; ?></strong></td>
     </tr>
 </table>
 
@@ -348,7 +348,7 @@ window.print();
     <td align="center" style="font-size:14px"><strong>ISI DISPOSISI</strong></td>
   </tr>
   <tr>
-    <td valign="top"><?PHP echo $nama_unit; ?> <BR><strong><?PHP echo $isi; ?></strong><BR> <?PHP echo $tgl_disposisi; ?><BR>
+    <td valign="top"><?php echo $nama_unit; ?> <BR><strong><?php echo $isi; ?></strong><BR> <?php echo $tgl_disposisi; ?><BR>
     <BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR><BR></td>
   </tr>
 </table>

@@ -1,4 +1,4 @@
-<?PHP
+<?php
 include "assets/include/session.php";
 include "assets/include/koneksi.php";
 $yearsnow	= date("Y");
@@ -110,7 +110,7 @@ $yearslast2	= $yearsnow - 2;
 										<input type="hidden" name="tahun" class="form-control" id="lname" value="<?php echo $yearsnow; ?>" >
 										<input type="hidden" name="id_atasan" class="form-control" id="lname" value="<?php echo $id_atasan; ?>" >
 										<select name="id_perjalanan" class="select2 form-control custom-select" required style="width: 100%; height:36px;">
-                                           			<?
+                                           			<?php
 													include "assets/combo/jenis-pd.php";
 													for ($i=0;$i<$count;$i++)
 													{

@@ -1,4 +1,4 @@
-<?
+<?php
 $query = "select * from jenis_pd order by id_pd";
 $hasil = mysqli_query($conn,$query);
 $kategori = array();

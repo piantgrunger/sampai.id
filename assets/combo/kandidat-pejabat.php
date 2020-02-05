@@ -1,4 +1,4 @@
-<?
+<?php
 
 $query = "select * from pejabat where status !='Daftar Tunggu' ";
 $hasil = mysqli_query($conn,$query);

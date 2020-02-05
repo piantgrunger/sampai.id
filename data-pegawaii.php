@@ -1,4 +1,4 @@
-<?PHP
+<?php
 include "assets/include/koneksi.php";
 
 ?><!DOCTYPE html>
@@ -92,7 +92,7 @@ include "assets/include/koneksi.php";
                   <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title">Data Pegawai </h5> 
-								<?PHP
+								<?php
 									if (isset($_GET['pesan'])){
 									$pesan = $_GET['pesan'];
 									$isi = $_GET['isi'];

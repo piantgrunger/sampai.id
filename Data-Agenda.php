@@ -1,4 +1,4 @@
-<?PHP
+<?php
 include "assets/include/session.php";
 include "assets/include/koneksi.php";
 
@@ -98,7 +98,7 @@ $tgl_now	= date("d-m-Y");
                   <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title">Data Agenda Tahun <?php echo $yearsnow; ?> <a href="cetak-data-pegawai.php"><button type="button" class="btn btn-primary btn-sm"><i class='mdi mdi-printer'></i> Cetak Data </button> </a></h5> 
-								<?PHP
+								<?php
 									if (isset($_GET['pesan'])){
 									$pesan = $_GET['pesan'];
 									$isi = $_GET['isi'];
@@ -185,7 +185,7 @@ $tgl_now	= date("d-m-Y");
                                                
                       <td>
 												<strong>
-												 <?PHP
+												 <?php
 												  if ($gelar_blk =='')
 												  {
 												  $namalengkap	= $gelar_dpn;
@@ -216,8 +216,8 @@ $tgl_now	= date("d-m-Y");
 												<div class="btn-group">
 													<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action </button>
 													<div class="dropdown-menu">
-													   <? echo ( "<a class='dropdown-item' href=Update-Acara.php?id=$id_acara title='Edit Data Agenda'> <i class='mdi mdi-pencil'></i> Update Agenda</a>")?>
-													   <? echo ( "<a class='dropdown-item' href=assets/include/Hapus-Agenda.php?id=$id_acara title='Hapus Data Agenda'> <i class='mdi mdi-delete-empty'></i> Hapus Data</a>")?> 
+													   <?php echo ( "<a class='dropdown-item' href=Update-Acara.php?id=$id_acara title='Edit Data Agenda'> <i class='mdi mdi-pencil'></i> Update Agenda</a>")?>
+													   <?php echo ( "<a class='dropdown-item' href=assets/include/Hapus-Agenda.php?id=$id_acara title='Hapus Data Agenda'> <i class='mdi mdi-delete-empty'></i> Hapus Data</a>")?> 
 													  
 													  
 													  

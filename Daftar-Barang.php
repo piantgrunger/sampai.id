@@ -1,4 +1,4 @@
-<?PHP
+<?php
 include "assets/include/session-sub-bidang.php";
 include "assets/include/koneksi.php";
 
@@ -92,7 +92,7 @@ include "assets/include/koneksi.php";
                 <!-- ============================================================== -->
                   <div class="card">
                             <div class="card-body">
-								<?PHP
+								<?php
 									if (isset($_GET['pesan'])){
 									$pesan = $_GET['pesan'];
 									$isi = $_GET['isi'];
@@ -122,7 +122,7 @@ include "assets/include/koneksi.php";
 											</tr>
                                         </thead>
                                         <tbody>
-										<?
+										<?php
 				 	$i 			= 1;
               	 	$jml_data1 	= "SELECT * FROM BARANG order by nama_barang ";
 					$query		= mysqli_query($conn, $jml_data1);

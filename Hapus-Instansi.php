@@ -1,4 +1,4 @@
-<?PHP
+<?php
 include "assets/include/session.php";
 include "assets/include/koneksi.php";
 
@@ -95,7 +95,7 @@ include "assets/include/koneksi.php";
                                 <h4 class="card-title m-b-0">Data  Yang Akan Dihapus </h4>
                             </div>
                             <div class="comment-widgets scrollable">
-				<?
+				<?php
 						$KODE			= $_GET['KODE'];
 						$sql			= "select * from skpd where id_skpd='$KODE'";
 						$sql_2 			= mysqli_query($conn, $sql);
@@ -112,16 +112,16 @@ include "assets/include/koneksi.php";
 				
                     <!-- Column -->
                    <div class="d-flex flex-row comment-row m-t-0">
-                                    <div class="p-2"><img  src="assets/images/logo-kotabaru.png" alt="<?PHP echo $nama_pegawai; ?>" height="200"   > </div>
+                                    <div class="p-2"><img  src="assets/images/logo-kotabaru.png" alt="<?php echo $nama_pegawai; ?>" height="200"   > </div>
                                     <div class="comment-text w-100">
                                         <h6 class="font-medium"><strong><?php echo $nama_skpd ?> </strong></h6>
                                         <span class="m-b-15 d-block"><?php echo $singkat ?> <?php echo $nipp ?></span>
-										<span class="m-b-15 d-block"><?PHP echo $alamat_skpd; ?></span>
-										<span class="m-b-15 d-block"><?PHP echo $telp_skpd; ?></span>
-										<span class="m-b-15 d-block"><?PHP echo $email_skpd; ?></span>
+										<span class="m-b-15 d-block"><?php echo $alamat_skpd; ?></span>
+										<span class="m-b-15 d-block"><?php echo $telp_skpd; ?></span>
+										<span class="m-b-15 d-block"><?php echo $email_skpd; ?></span>
                                         <div class="comment-footer">
                                            
-											<? echo ( "<a href=assets/include/hapus-instansi.php?KODE=$KODE title='Hapus Data Instansi' > ");?><button type="button" class="btn btn-danger btn-sm"> Klik Disini Untuk Menghapus Data</button></a>
+											<?php echo ( "<a href=assets/include/hapus-instansi.php?KODE=$KODE title='Hapus Data Instansi' > ");?><button type="button" class="btn btn-danger btn-sm"> Klik Disini Untuk Menghapus Data</button></a>
                                         </div>
                                     </div>
                                 </div>

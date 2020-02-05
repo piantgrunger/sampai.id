@@ -1,4 +1,4 @@
-<?PHP
+<?php
 include "assets/include/session.php";
 include "assets/include/koneksi.php";
 
@@ -93,7 +93,7 @@ include "assets/include/koneksi.php";
                   <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title">Data Pegawai <a href="cetak-data-pegawai.php"><button type="button" class="btn btn-primary btn-sm"><i class='mdi mdi-printer'></i> Cetak Data </button> </a></h5> 
-								<?PHP
+								<?php
 									if (isset($_GET['pesan'])){
 									$pesan = $_GET['pesan'];
 									$isi = $_GET['isi'];
@@ -124,7 +124,7 @@ include "assets/include/koneksi.php";
                                             </tr>
                                         </thead>
                                         <tbody>
-										<?
+										<?php
 				 	$i 			= 1;
               	 	$jml_data1 	= "SELECT * FROM pegawai order by level,golongan,status ";
 					$query		= mysqli_query($conn, $jml_data1);
@@ -157,7 +157,7 @@ include "assets/include/koneksi.php";
                                                 <td><?php echo $i ?></td>
                                                <td>
 												<strong>
-												 <?PHP
+												 <?php
 												  if ($gelar_blk =='')
 												  {
 												  $namalengkap	= $gelar_dpn;
@@ -186,7 +186,7 @@ include "assets/include/koneksi.php";
 													<br>
 													
 					 								<a href='#'><?php echo $golongan; ?> <br> <?php echo $tmt; ?></a>
-													<?
+													<?php
 													}
 													else
 													{
@@ -230,15 +230,15 @@ include "assets/include/koneksi.php";
 												<div class="btn-group">
 													<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action </button>
 													<div class="dropdown-menu">
-													  <? //echo ( "<a class='dropdown-item' href=choice.php?KODE=$data[0] title='Cetak Kartu Pegawai'> <i class='mdi mdi-printer'></i> Cetak Kartu</a>")?> 
-													  <? echo ( "<a class='dropdown-item' href=choiice.php?KODE=$data_kk11[0] title='Ajukan Permohonan Cuti'> <i class='mdi mdi-coffee'></i> Ajukan Cuti</a>")?> 
-													  <? echo ( "<a class='dropdown-item' href=sppd.php?KODE=$data_kk11[0] title='Ajukan SPPD'> <i class='mdi mdi-file-outline'></i> Ajukan SPPD</a>")?> 
+													  <?php //echo ( "<a class='dropdown-item' href=choice.php?KODE=$data[0] title='Cetak Kartu Pegawai'> <i class='mdi mdi-printer'></i> Cetak Kartu</a>")?> 
+													  <?php echo ( "<a class='dropdown-item' href=choiice.php?KODE=$data_kk11[0] title='Ajukan Permohonan Cuti'> <i class='mdi mdi-coffee'></i> Ajukan Cuti</a>")?> 
+													  <?php echo ( "<a class='dropdown-item' href=sppd.php?KODE=$data_kk11[0] title='Ajukan SPPD'> <i class='mdi mdi-file-outline'></i> Ajukan SPPD</a>")?> 
 
-														<? echo ( "<a class='dropdown-item' href=Detail-Pegawai.php?KODE=$data_kk11[0] title='Data Detail Pegawai'> <i class='mdi mdi-human-greeting'></i> Detail Pegawai</a>")?> 
-													    <? echo ( "<a class='dropdown-item' href=choicee.php?KODE=$data_kk11[0] title='Edit Data Pegawai'> <i class='mdi mdi-pencil'></i> Edit Data</a>")?> 
-														 <? echo ( "<a class='dropdown-item' href=update-foto.php?KODE=$data_kk11[0] title='Edit Data Pegawai'> <i class='mdi mdi-image-filter-center-focus'></i> Edit Poto</a>")?> 
+														<?php echo ( "<a class='dropdown-item' href=Detail-Pegawai.php?KODE=$data_kk11[0] title='Data Detail Pegawai'> <i class='mdi mdi-human-greeting'></i> Detail Pegawai</a>")?> 
+													    <?php echo ( "<a class='dropdown-item' href=choicee.php?KODE=$data_kk11[0] title='Edit Data Pegawai'> <i class='mdi mdi-pencil'></i> Edit Data</a>")?> 
+														 <?php echo ( "<a class='dropdown-item' href=update-foto.php?KODE=$data_kk11[0] title='Edit Data Pegawai'> <i class='mdi mdi-image-filter-center-focus'></i> Edit Poto</a>")?> 
 														  <div class="dropdown-divider"></div>
-														  <? echo ( "<a class='dropdown-item' href=Hapus-Pegawai.php?KODE=$data_kk11[0] title='Hapus Data'> <i class='mdi mdi-delete-empty'></i> Hapus Data</a>")?> 
+														  <?php echo ( "<a class='dropdown-item' href=Hapus-Pegawai.php?KODE=$data_kk11[0] title='Hapus Data'> <i class='mdi mdi-delete-empty'></i> Hapus Data</a>")?> 
 													 
 													</div>
 												</div><!-- /btn-group -->

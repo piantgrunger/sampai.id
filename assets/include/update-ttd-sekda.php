@@ -1,4 +1,4 @@
-<?PHP
+<?php
 include("koneksi.php");
 				
 				$allowed_ext	= array('png');

@@ -1,4 +1,4 @@
-<?
+<?php
 $query = "select * from distributor  order by distributor";
 $hasil = mysqli_query($conn,$query);
 $jabatan = array();

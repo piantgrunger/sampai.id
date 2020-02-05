@@ -1,4 +1,4 @@
-<?PHP
+<?php
 include "assets/include/session.php";
 include "assets/include/koneksi.php";
 $yearsnow	= date("Y");
@@ -103,7 +103,7 @@ $yearslast2	= $yearsnow - 2;
                                 <h4 class="card-title m-b-0">Data Pegawai </h4>
                             </div>
                             <div class="comment-widgets scrollable">
-						<?
+						<?php
 						$KODE			= $_GET['KODE'];
 						$sql			= "select * from pegawai where id_pegawai='$KODE'";
 						$sql_2 			= mysqli_query($conn, $sql);
@@ -176,14 +176,14 @@ $yearslast2	= $yearsnow - 2;
 						?>
                     <!-- Column -->
                    <div class="d-flex flex-row comment-row m-t-0">
-                                    <div class="p-2"><img  src="assets/include/<? echo $lokasi; ?>" alt="<?PHP echo $nama_pegawai; ?>" height="150" width="150" class="rounded-circle" > </div>
+                                    <div class="p-2"><img  src="assets/include/<?php echo $lokasi; ?>" alt="<?php echo $nama_pegawai; ?>" height="150" width="150" class="rounded-circle" > </div>
                                     <div class="comment-text w-100">
                                         <h6 class="font-medium"><strong><?php echo $nama1 ?>  <?php echo $nama2 ?> <?php echo $nama3 ?> </strong></h6>
                                         <span class="m-b-15 d-block"><?php echo $nanana ?> <?php echo $nipp ?></span>
-										<span class="m-b-15 d-block"><?PHP echo $n_golongan; ?></span>
-										<span class="m-b-15 d-block"><?PHP echo $jabatan; ?></span>
-										<span class="m-b-15 d-block"><?PHP echo $alamat; ?></span>
-										<span class="m-b-15 d-block"><?PHP echo $no_telp; ?></span>
+										<span class="m-b-15 d-block"><?php echo $n_golongan; ?></span>
+										<span class="m-b-15 d-block"><?php echo $jabatan; ?></span>
+										<span class="m-b-15 d-block"><?php echo $alamat; ?></span>
+										<span class="m-b-15 d-block"><?php echo $no_telp; ?></span>
                                       
                                     </div>
                                 </div>
@@ -415,7 +415,7 @@ $yearslast2	= $yearsnow - 2;
 										<input type="hidden" name="no_cuti" class="form-control" id="lname" value="<?php echo  $new_code;?>" >
 
 										<select name="id_cuti" class="select2 form-control custom-select" required style="width: 100%; height:36px;">
-                                           			<?
+                                           			<?php
 													include "assets/combo/jenis-cuti.php";
 													for ($i=0;$i<$count;$i++)
 													{

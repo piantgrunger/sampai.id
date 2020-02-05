@@ -1,4 +1,4 @@
-<?
+<?php
 $query = "select * from esselon order by id_esselon";
 $hasil = mysqli_query($conn,$query);
 $kategori = array();

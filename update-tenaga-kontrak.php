@@ -1,10 +1,10 @@
-<?PHP
+<?php
 include "assets/include/session.php";
 include "assets/include/koneksi.php";
 
 ?>
 
-	<?
+	<?php
 		$KODE			= $_GET['KODE'];
 		$sql_utama		= "select * from pegawai where id_pegawai='$KODE'";
 		$sql_2 			= mysqli_query($conn, $sql_utama);
@@ -149,29 +149,29 @@ include "assets/include/koneksi.php";
                                     <div class="form-group row">
                                         <label for="fname" class="col-sm-3 text-right control-label col-form-label">Nama Lengkap</label>
                                         <div class="col-sm-2">
-                                            <input type="text" name="nama1" class="form-control" id="fname"  placeholder="Gelar Depan" 					value="<? echo $nama1; ?>" >
-											<input type="hidden" name="id_pegawai" class="form-control" id="fname"  placeholder="Gelar Depan" 					value="<? echo $KODE; ?>" >
+                                            <input type="text" name="nama1" class="form-control" id="fname"  placeholder="Gelar Depan" 					value="<?php echo $nama1; ?>" >
+											<input type="hidden" name="id_pegawai" class="form-control" id="fname"  placeholder="Gelar Depan" 					value="<?php echo $KODE; ?>" >
 
                                         </div>
 										<div class="col-sm-5">
-                                            <input type="text" name="nama2" class="form-control" id="fname"  required placeholder="Nama Lengkap" 		value="<? echo $nama2; ?>">
+                                            <input type="text" name="nama2" class="form-control" id="fname"  required placeholder="Nama Lengkap" 		value="<?php echo $nama2; ?>">
                                         </div>
 										<div class="col-sm-2">
-                                            <input type="text" name="nama3" class="form-control" id="fname"  placeholder="Gelar Belakang" 				value="<? echo $nama3; ?>">
+                                            <input type="text" name="nama3" class="form-control" id="fname"  placeholder="Gelar Belakang" 				value="<?php echo $nama3; ?>">
                                         </div>
                                     </div>
                                    
                                     <div class="form-group row">
                                         <label for="lname" class="col-sm-3 text-right control-label col-form-label">NRPP/NRTK Pegawai</label>
                                         <div class="col-sm-9">
-                                            <input type="text" name="nip" class="form-control" id="lname" maxlength="18" required 						value="<? echo $nrtk; ?>">
+                                            <input type="text" name="nip" class="form-control" id="lname" maxlength="18" required 						value="<?php echo $nrtk; ?>">
                                         </div>
                                     </div>
 									
                                     <div class="form-group row">
                                         <label for="email1" class="col-sm-3 text-right control-label col-form-label">Jabatan</label>
                                         <div class="col-sm-9">
-                                            <input name="jabatan" type="text" class="form-control" id="lname" required placeholder="Jabatan Pegawai"		value="<? echo $jabatan; ?>">
+                                            <input name="jabatan" type="text" class="form-control" id="lname" required placeholder="Jabatan Pegawai"		value="<?php echo $jabatan; ?>">
                                         </div>
                                     </div>
 									
@@ -180,8 +180,8 @@ include "assets/include/koneksi.php";
                                         <label for="lname" class="col-sm-3 text-right control-label col-form-label">Unit Kerja/Instansi</label>
                                         <div class="col-sm-9">
                                             <select name="unitkerja" class="select2 form-control custom-select" required style="width: 100%; height:36px;">
-											<option value="<? echo $id_skpd_; ?>"><? echo $nama_skpd_; ?></option>
-                                           			<?
+											<option value="<?php echo $id_skpd_; ?>"><?php echo $nama_skpd_; ?></option>
+                                           			<?php
 													include "assets/combo/nama_skpd.php";
 													for ($i=0;$i<$count;$i++)
 													{
@@ -195,7 +195,7 @@ include "assets/include/koneksi.php";
                                         <label for="lname" class="col-sm-3 text-right control-label col-form-label">Jenis Kelamin</label>
                                         <div class="col-sm-9">
                                             <select name="jk" class="select2 form-control custom-select" required style="width: 100%; height:36px;">
-											<option value="<? echo $kelamin; ?>"><? echo $kelamin; ?></option>
+											<option value="<?php echo $kelamin; ?>"><?php echo $kelamin; ?></option>
                                            		<option>Laki-Laki</option>
 												<option>Perempuan</option>
                                         	</select>
@@ -205,7 +205,7 @@ include "assets/include/koneksi.php";
                                         <label for="lname" class="col-sm-3 text-right control-label col-form-label">Golongan Darah</label>
                                         <div class="col-sm-9">
                                           <select name="goldarah" class="select2 form-control custom-select" required style="width: 100%; height:36px;">
-										  <option value="<? echo $gol_darah; ?>"><? echo $gol_darah; ?></option>
+										  <option value="<?php echo $gol_darah; ?>"><?php echo $gol_darah; ?></option>
                                            		<option>A</option>
 												<option>B</option>
 												<option>AB</option>
@@ -218,7 +218,7 @@ include "assets/include/koneksi.php";
 									 <div class="form-group row">
                                         <label for="cono1" class="col-sm-3 text-right control-label col-form-label">Alamat</label>
                                         <div class="col-sm-9">
-                                            <textarea name="alamat" class="form-control"><? echo $alamat; ?></textarea>
+                                            <textarea name="alamat" class="form-control"><?php echo $alamat; ?></textarea>
                                         </div>
                                     </div>
 									

@@ -2,7 +2,7 @@
 /**
  * @package dompdf
  * @link    http://www.dompdf.com/
- * @author  Fabien Ménager <fabien.menager@gmail.com>
+ * @author  Fabien Mï¿½nager <fabien.menager@gmail.com>
  * @license http://www.gnu.org/copyleft/lesser.html GNU Lesser General Public License
  * @version $Id: line_box.cls.php 471 2012-02-06 21:59:10Z fabien.menager $
  */

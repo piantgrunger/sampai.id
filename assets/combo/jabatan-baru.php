@@ -1,4 +1,4 @@
-<?
+<?php
 $query = "select * from jabatan where status='Kosong' order by parent_id,jab_order ASC";
 $hasil = mysqli_query($conn,$query);
 $kategori = array();

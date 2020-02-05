@@ -1,4 +1,4 @@
-<?
+<?php
 $query = "select * from diklat order by id_diklat";
 $hasil = mysqli_query($conn,$query);
 $kategori = array();

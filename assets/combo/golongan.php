@@ -1,4 +1,4 @@
-<?
+<?php
 $query = "select * from tb_golongan order by id_gol";
 $hasil = mysqli_query($conn,$query);
 $kategori = array();

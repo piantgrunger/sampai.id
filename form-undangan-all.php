@@ -239,7 +239,7 @@
      <p style="font-size:12px" align="center"> Alamat Kantor : Jl. Panglima Batur No. 1 Banjarbaru Provinsi Kalimantan Selatan. Telp. (0511) 477 2569 Faks. 477 4269</p>
    </div>
    <div id="content">
-   <?PHP
+   <?php
    $sql_bro 				= "select * from tb_pelantikan where id_pelantikan='$id_pelantikan' ";
    $sql_01					= mysqli_query ($conn,$sql_bro);
    $data_bro	 			= mysqli_fetch_array($sql_01);

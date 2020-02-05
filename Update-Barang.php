@@ -1,4 +1,4 @@
-<?PHP
+<?php
 include "assets/include/session-persediaan.php";
 include "assets/include/koneksi.php";
 $id_barang = $_GET['id'];

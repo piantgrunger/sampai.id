@@ -1,4 +1,4 @@
-<?
+<?php
 include('koneksi.php');
 $id_sppd 					= $_POST['id_sppd'];
 $klasifikasi				= $_POST['klasifikasi'];

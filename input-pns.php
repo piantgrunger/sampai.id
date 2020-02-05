@@ -1,4 +1,4 @@
-<?PHP
+<?php
 include "assets/include/session.php";
 include "assets/include/koneksi.php";
 
@@ -129,7 +129,7 @@ include "assets/include/koneksi.php";
                                         <label for="lname" class="col-sm-3 text-right control-label col-form-label">Golongan/Ruang</label>
                                         <div class="col-sm-9">
                                              <select name="golongan" class="select2 form-control custom-select" style="width: 100%; height:36px;">
-                                           			<?
+                                           			<?php
 													include "assets/combo/golongan.php";
 													for ($i=0;$i<$count;$i++)
 													{
@@ -149,7 +149,7 @@ include "assets/include/koneksi.php";
                                         <label for="email1" class="col-sm-3 text-right control-label col-form-label">Jabatan</label>
                                         <div class="col-sm-9">
                                              <select name="id_jabatan" class="select2 form-control custom-select" style="width: 100%; height:36px;">
-                                           			<?
+                                           			<?php
 													include "assets/combo/jabatan.php";
 													for ($i=0;$i<$count;$i++)
 													{
@@ -163,7 +163,7 @@ include "assets/include/koneksi.php";
                                         <label for="email1" class="col-sm-3 text-right control-label col-form-label">Atasan</label>
                                         <div class="col-sm-9">
                                              <select name="id_atasan" class="select2 form-control custom-select" style="width: 100%; height:36px;">
-                                           			<?
+                                           			<?php
 													include "assets/combo/atasan.php";
 													for ($i=0;$i<$count;$i++)
 													{
@@ -177,7 +177,7 @@ include "assets/include/koneksi.php";
                                         <label for="email1" class="col-sm-3 text-right control-label col-form-label">Unit Kerja</label>
                                         <div class="col-sm-9">
                                              <select name="unitkerja" class="select2 form-control custom-select" style="width: 100%; height:36px;">
-                                           			<?
+                                           			<?php
 													include "assets/combo/unit_org.php";
 													for ($i=0;$i<$count;$i++)
 													{

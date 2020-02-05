@@ -1,4 +1,4 @@
-<?
+<?php
 $query = "select * from formasi order by id_formasi";
 $hasil = mysqli_query($conn,$query);
 $kategori = array();

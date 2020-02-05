@@ -1,4 +1,4 @@
-<?
+<?php
 include('koneksi.php');
 
 $nama_kantor 			= $_POST['nama_kantor'];

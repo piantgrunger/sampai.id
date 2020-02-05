@@ -1,9 +1,9 @@
-<?PHP
+<?php
 include "assets/include/session.php";
 include "assets/include/koneksi.php";
 
 ?>
-<?
+<?php
 		$KODE			= $_GET['KODE'];
 		$sql_utama		= "select * from users where id='$KODE'";
 		$sql_2 			= mysqli_query($conn, $sql_utama);
@@ -114,8 +114,8 @@ include "assets/include/koneksi.php";
                                         <label for="fname" class="col-sm-3 text-right control-label col-form-label">Nama Lengkap</label>
                                       
 										<div class="col-sm-5">
-                                            <input type="text" name="admin" class="form-control" id="fname"  required placeholder="Nama Lengkap" value="<? echo $nama; ?>">
-											<input type="hidden" name="id_user" class="form-control" id="fname"  required placeholder="Nama Lengkap" value="<? echo $KODE; ?>">
+                                            <input type="text" name="admin" class="form-control" id="fname"  required placeholder="Nama Lengkap" value="<?php echo $nama; ?>">
+											<input type="hidden" name="id_user" class="form-control" id="fname"  required placeholder="Nama Lengkap" value="<?php echo $KODE; ?>">
 
                                         </div>
 										
@@ -124,7 +124,7 @@ include "assets/include/koneksi.php";
                                     <div class="form-group row">
                                         <label for="lname" class="col-sm-3 text-right control-label col-form-label">Username</label>
                                         <div class="col-sm-9">
-                                            <input type="text" name="email" class="form-control" id="email1" maxlength="18" required placeholder="Username" value="<? echo $email; ?>">
+                                            <input type="text" name="email" class="form-control" id="email1" maxlength="18" required placeholder="Username" value="<?php echo $email; ?>">
                                         </div>
                                     </div>
 									<div class="form-group row">

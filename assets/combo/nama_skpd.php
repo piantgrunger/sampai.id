@@ -1,4 +1,4 @@
-<?
+<?php
 //$query = "select id_skpd,nama_skpd,key_skpd from skpd  where id_skpd='60' order by nama_skpd";
 $query = "select id_skpd,nama_skpd,key_skpd from skpd order by nama_skpd";
 

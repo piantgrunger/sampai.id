@@ -1,4 +1,4 @@
-<?
+<?php
 include('koneksi.php');
 $id_barang 					= $_POST['id_barang'];
 $qty						= $_POST['qty'];

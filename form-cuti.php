@@ -530,7 +530,7 @@ function findage($dob)
     <td width="2%">:</td>
     <td width="48%">
 												<strong>
-												 <?PHP
+												 <?php
 												  if ($gelar_blk =='')
 												  {
 												  $namalengkap	= $gelar_dpn;

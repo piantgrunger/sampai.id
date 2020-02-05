@@ -1,4 +1,4 @@
-<?PHP
+<?php
 include "assets/include/session.php";
 include "assets/include/koneksi.php";
 
@@ -97,7 +97,7 @@ $yearsnow	= date("Y");
                             <div class="card-body">
                                 <h5 class="card-title">Data Surat Masuk Tahun <?php echo $yearsnow; ?> <a href="cetak-data-pegawai.php">
                                 <button type="button" class="btn btn-primary btn-sm"><i class='mdi mdi-printer'></i> Cetak Data </button> </a></h5> 
-								<?PHP
+								<?php
 									if (isset($_GET['pesan'])){
 									$pesan = $_GET['pesan'];
 									$isi = $_GET['isi'];
@@ -129,7 +129,7 @@ $yearsnow	= date("Y");
                                             </tr>
                                         </thead>
                                         <tbody>
-										<?
+										<?php
 										$yearsnow	= date("Y");
 				 	$i 			= 1;
               	 	$jml_data1 	= "SELECT * FROM surat_masuk where tahun ='$yearsnow' order by no_agenda ";
@@ -219,19 +219,19 @@ $yearsnow	= date("Y");
 												<div class="btn-group">
 													<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action </button>
 													<div class="dropdown-menu">
-													  <? echo ( "<a class='dropdown-item' href=surat-masuk-update.php?id=$id_suratmasuk title='Update Surat Masuk'> <i class='mdi mdi-email-variant'></i> Update Surat</a>")?> 
+													  <?php echo ( "<a class='dropdown-item' href=surat-masuk-update.php?id=$id_suratmasuk title='Update Surat Masuk'> <i class='mdi mdi-email-variant'></i> Update Surat</a>")?> 
 													  <?php
 														if ($hit_dis == 0)
 														{
 														?>
-														 <? echo ( "<a class='dropdown-item' href=disposisi.php?id=$data[0] title='Disposisi'> <i class='mdi mdi-feather'></i> Disposisi</a>")?>
+														 <?php echo ( "<a class='dropdown-item' href=disposisi.php?id=$data[0] title='Disposisi'> <i class='mdi mdi-feather'></i> Disposisi</a>")?>
 														<?php
 														}
 														else
 														{
 														?>
-														<? echo ( "<a class='dropdown-item' href=disposisi-update.php?id=$id_disposisi title='Update Disposisi'> <i class='mdi mdi-pencil'></i> Update Disposisi</a>")?>
-													  	<? echo ( "<a class='dropdown-item' href=cetak-kendali.php?id=$data[0] title='Cetak Form Kendali'> <i class='mdi mdi-printer'></i> Cetak Kendali</a>")?>
+														<?php echo ( "<a class='dropdown-item' href=disposisi-update.php?id=$id_disposisi title='Update Disposisi'> <i class='mdi mdi-pencil'></i> Update Disposisi</a>")?>
+													  	<?php echo ( "<a class='dropdown-item' href=cetak-kendali.php?id=$data[0] title='Cetak Form Kendali'> <i class='mdi mdi-printer'></i> Cetak Kendali</a>")?>
 														<?php
 														}
 														?>
@@ -243,11 +243,11 @@ $yearsnow	= date("Y");
 													  if ($status=="Proses")
 														{
 													  ?>
-													     <? echo ( "<a class='dropdown-item' href=assets/include/Setuju-Cuti.php?id=$id_ambil_cuti title='Form Cuti Disetujui'> <i class='mdi mdi-checkbox-marked-circle-outline'></i> Setuju </a>")?> 
-													     <? echo ( "<a class='dropdown-item' href=update-cuti.php?id=$id_ambil_cuti title='Edit Data Cuti'> <i class='mdi mdi-pencil'></i> Update Cuti</a>")?> 
+													     <?php echo ( "<a class='dropdown-item' href=assets/include/Setuju-Cuti.php?id=$id_ambil_cuti title='Form Cuti Disetujui'> <i class='mdi mdi-checkbox-marked-circle-outline'></i> Setuju </a>")?> 
+													     <?php echo ( "<a class='dropdown-item' href=update-cuti.php?id=$id_ambil_cuti title='Edit Data Cuti'> <i class='mdi mdi-pencil'></i> Update Cuti</a>")?> 
 													     <div class="dropdown-divider"></div>
-													      <? echo ( "<a class='dropdown-item' href=assets/include/Hapus-Cuti.php?id=$id_ambil_cuti title='Hapus Data'> <i class='mdi mdi-delete-empty'></i> Hapus Data</a>")?> 
-													 <?
+													      <?php echo ( "<a class='dropdown-item' href=assets/include/Hapus-Cuti.php?id=$id_ambil_cuti title='Hapus Data'> <i class='mdi mdi-delete-empty'></i> Hapus Data</a>")?> 
+													 <?php
 														}
 														else
 														{

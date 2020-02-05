@@ -1,4 +1,4 @@
-<?PHP
+<?php
 include("koneksi.php");
 $id_barang = $_GET['id'];
 

@@ -1,4 +1,4 @@
-<?PHP
+<?php
 include "assets/include/session-persediaan.php";
 include "assets/include/koneksi.php";
 
@@ -92,7 +92,7 @@ include "assets/include/koneksi.php";
                 <!-- ============================================================== -->
                   <div class="card">
                             <div class="card-body">
-								<?PHP
+								<?php
 									if (isset($_GET['pesan'])){
 									$pesan = $_GET['pesan'];
 									$isi = $_GET['isi'];
@@ -124,7 +124,7 @@ include "assets/include/koneksi.php";
                                             </tr>
                                         </thead>
                                         <tbody>
-										<?
+										<?php
 				 	$i 			= 1;
               	 	$jml_data1 	= "SELECT * FROM spk order by n_bulan, tgl_serah ";
 					$query		= mysqli_query($conn, $jml_data1);
@@ -173,21 +173,21 @@ include "assets/include/koneksi.php";
 													<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action </button>
 													<div class="dropdown-menu">
 													 
-													    <? echo ( "<a class='dropdown-item' href=Input-SPK-Step-Three.php?KODE=$data[0] title='Edit SPK'> <i class='mdi mdi-cart-plus'></i> Belanja Barang</a>")?> 
-														<? echo ( "<a class='dropdown-item' href=update-spk.php?kd=$data[0] title='Edit SPK'> <i class='mdi mdi-pencil'></i> Edit SPO/SPK</a>")?> 
-														<? echo ( "<a class='dropdown-item' href=form-cetak-spk.php?id=$data[0] title='Cetak Surat Perintah Kerja'> <i class='mdi mdi-printer'></i> Cetak SPO/SPK</a>")?> 
+													    <?php echo ( "<a class='dropdown-item' href=Input-SPK-Step-Three.php?KODE=$data[0] title='Edit SPK'> <i class='mdi mdi-cart-plus'></i> Belanja Barang</a>")?> 
+														<?php echo ( "<a class='dropdown-item' href=update-spk.php?kd=$data[0] title='Edit SPK'> <i class='mdi mdi-pencil'></i> Edit SPO/SPK</a>")?> 
+														<?php echo ( "<a class='dropdown-item' href=form-cetak-spk.php?id=$data[0] title='Cetak Surat Perintah Kerja'> <i class='mdi mdi-printer'></i> Cetak SPO/SPK</a>")?> 
 														
 														 <?php
 													  if ($nomor_ba=='')
 														{
 														?>
-													  	<? echo ( "<a class='dropdown-item' href=assets/include/input-nomor-ba.php?id=$data[0] title='Input Nomor BA'> <i class='mdi mdi-coffee-outline'></i> Nomor BA</a>")?>													    													<?php
+													  	<?php echo ( "<a class='dropdown-item' href=assets/include/input-nomor-ba.php?id=$data[0] title='Input Nomor BA'> <i class='mdi mdi-coffee-outline'></i> Nomor BA</a>")?>													    													<?php
 														}
 														else
 														{
 														?>
-														<? echo ( "<a class='dropdown-item' href=form-cetak-berita-acara.php?id=$data[0] title='Cetak Berita Acara'> <i class='mdi mdi-printer-alert'></i> Cetak BA</a>")?>						
-														<?
+														<?php echo ( "<a class='dropdown-item' href=form-cetak-berita-acara.php?id=$data[0] title='Cetak Berita Acara'> <i class='mdi mdi-printer-alert'></i> Cetak BA</a>")?>						
+														<?php
 														}
 														?>
 														

@@ -1,4 +1,4 @@
-<?PHP
+<?php
 include "assets/include/session-persediaan.php";
 include "assets/include/koneksi.php";
 
@@ -150,7 +150,7 @@ function rupiah_2($angka){
                 <!-- ============================================================== -->
                   <div class="card">
                             <div class="card-body">
-								<?PHP
+								<?php
 									if (isset($_GET['pesan'])){
 									$pesan = $_GET['pesan'];
 									$isi = $_GET['isi'];
@@ -181,7 +181,7 @@ function rupiah_2($angka){
 											</tr>
                                         </thead>
                                         <tbody>
-										<?
+										<?php
 				 	$i 			= 1;
               	 	$jml_data1 	= "SELECT * FROM BARANG order by nama_barang ";
 					$query		= mysqli_query($conn, $jml_data1);
@@ -205,8 +205,8 @@ function rupiah_2($angka){
 													<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action </button>
 													<div class="dropdown-menu">
 													 
-														<? echo ( "<a class='dropdown-item' href=update-barang.php?id=$data[0] title='Edit Barang'> <i class='mdi mdi-pencil'></i> Edit Barang</a>")?> 
-														<? echo ( "<a class='dropdown-item' href=assets/include/hapus-barang.php?id=$data[0] title='Hapus Barang'> <i class='mdi mdi-delete-empty'></i> Delete Barang</a>")?> 
+														<?php echo ( "<a class='dropdown-item' href=update-barang.php?id=$data[0] title='Edit Barang'> <i class='mdi mdi-pencil'></i> Edit Barang</a>")?> 
+														<?php echo ( "<a class='dropdown-item' href=assets/include/hapus-barang.php?id=$data[0] title='Hapus Barang'> <i class='mdi mdi-delete-empty'></i> Delete Barang</a>")?> 
 														
 														
 														

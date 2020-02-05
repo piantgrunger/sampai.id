@@ -1,4 +1,4 @@
-<?PHP
+<?php
 include "assets/include/session.php";
 include "assets/include/koneksi.php";
 
@@ -93,7 +93,7 @@ include "assets/include/koneksi.php";
                   <div class="card">
                             <div class="card-body">
                                 <h5 class="card-title">Data Admin </h5>
-								<?PHP
+								<?php
 									if (isset($_GET['pesan'])){
 									$pesan = $_GET['pesan'];
 									$isi = $_GET['isi'];
@@ -122,7 +122,7 @@ include "assets/include/koneksi.php";
                                             </tr>
                                         </thead>
                                         <tbody>
-										<?
+										<?php
 				 	$i 			= 1;
               	 	$jml_data1 	= "SELECT * FROM users order by nama ";
 					$query		= mysqli_query($conn, $jml_data1);
@@ -140,10 +140,10 @@ include "assets/include/koneksi.php";
 													<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action </button>
 													<div class="dropdown-menu">
 													 
-													    <? echo ( "<a class='dropdown-item' href=reset-password.php?KODE=$data[0] title='Edit Data Admin'> <i class='mdi mdi-pencil'></i> Reset Password</a>")?> 
-														 <? echo ( "<a class='dropdown-item' href=update-foto-admin.php?KODE=$data[0] title='Edit Foto Admin'> <i class='mdi mdi-image-filter-center-focus'></i> Edit Poto</a>")?> 
+													    <?php echo ( "<a class='dropdown-item' href=reset-password.php?KODE=$data[0] title='Edit Data Admin'> <i class='mdi mdi-pencil'></i> Reset Password</a>")?> 
+														 <?php echo ( "<a class='dropdown-item' href=update-foto-admin.php?KODE=$data[0] title='Edit Foto Admin'> <i class='mdi mdi-image-filter-center-focus'></i> Edit Poto</a>")?> 
 														  <div class="dropdown-divider"></div>
-														  <? echo ( "<a class='dropdown-item' href=Assets/Include/Hapus-Admin.php?KODE=$data[0] title='Hapus Data Admin'> <i class='mdi mdi-delete-empty'></i> Hapus Data</a>")?>													</div>
+														  <?php echo ( "<a class='dropdown-item' href=Assets/Include/Hapus-Admin.php?KODE=$data[0] title='Hapus Data Admin'> <i class='mdi mdi-delete-empty'></i> Hapus Data</a>")?>													</div>
 												</div><!-- /btn-group -->												</td>
                   </tr>
               

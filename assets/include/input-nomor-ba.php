@@ -1,4 +1,4 @@
-<?
+<?php
 include('koneksi.php');
 $id_spk = $_GET['id'];
 

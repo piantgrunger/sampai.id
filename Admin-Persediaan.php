@@ -1,4 +1,4 @@
-<?PHP
+<?php
 include "assets/include/session-persediaan.php";
 include "assets/include/koneksi.php";
 $yearsnow	= date("Y");
@@ -124,7 +124,7 @@ $tidakpuas 		= $jumlah_select_3/$jumlah_select_ * 100;
 							                                <h5 class="card-title">Data Agenda Tanggal <?php echo $tgl_now; ?> <?php echo $select_pegawai; ?></h5> 
 
 					<div class="row">
-					<?				
+					<?php				
 
 				 	$i 			= 1;
               	 	$jml_data1 	= "SELECT * FROM acara where tanggal = '$tgl_now'  and status ='Proses' order by tanggal ";
@@ -232,7 +232,7 @@ $tidakpuas 		= $jumlah_select_3/$jumlah_select_ * 100;
 								</h6>
 								<h6 class="text-white">
 								 DI HADIRI OLEH : <strong>
-												 <?PHP
+												 <?php
 												  if ($gelar_blk =='')
 												  {
 												  $namalengkap	= $gelar_dpn;
@@ -273,7 +273,7 @@ $tidakpuas 		= $jumlah_select_3/$jumlah_select_ * 100;
 					 
                    
                 </div>
-								<?PHP
+								<?php
 									if (isset($_GET['pesan'])){
 									$pesan = $_GET['pesan'];
 									$isi = $_GET['isi'];
@@ -342,7 +342,7 @@ $tidakpuas 		= $jumlah_select_3/$jumlah_select_ * 100;
 									
 								
 								?>
-								 <?PHP
+								 <?php
 								 ?>
                                   <h4 class="alert-heading">
 								  <?php 

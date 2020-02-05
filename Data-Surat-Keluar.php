@@ -1,4 +1,4 @@
-<?PHP
+<?php
 include "assets/include/session.php";
 include "assets/include/koneksi.php";
 
@@ -97,7 +97,7 @@ $yearsnow	= date("Y");
                             <div class="card-body">
                                 <h5 class="card-title">Data Surat Keluar Tahun <?php echo $yearsnow; ?> <a href="cetak-data-pegawai.php">
                                 <button type="button" class="btn btn-primary btn-sm"><i class='mdi mdi-printer'></i> Cetak Data </button> </a></h5> 
-								<?PHP
+								<?php
 									if (isset($_GET['pesan'])){
 									$pesan = $_GET['pesan'];
 									$isi = $_GET['isi'];
@@ -129,7 +129,7 @@ $yearsnow	= date("Y");
                                             </tr>
                                         </thead>
                                         <tbody>
-										<?
+										<?php
 										$yearsnow	= date("Y");
 				 	$i 			= 1;
               	 	$jml_data1 	= "SELECT * FROM surat_keluar where tahun ='$yearsnow' order by no_agenda ";
@@ -194,7 +194,7 @@ $yearsnow	= date("Y");
 												<div class="btn-group">
 													<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action </button>
 													<div class="dropdown-menu">
-													  <? echo ( "<a class='dropdown-item' href=surat-keluar-update.php?id=$id_suratkeluar title='Update Surat Keluar'> <i class='mdi mdi-email-variant'></i> Update Surat</a>")?> 
+													  <?php echo ( "<a class='dropdown-item' href=surat-keluar-update.php?id=$id_suratkeluar title='Update Surat Keluar'> <i class='mdi mdi-email-variant'></i> Update Surat</a>")?> 
 													 
 													 
 													</div>

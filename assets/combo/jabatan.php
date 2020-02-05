@@ -1,4 +1,4 @@
-<?
+<?php
 $query = "select * from jabatan order by id_esselon";
 $hasil = mysqli_query($conn,$query);
 $jabatan = array();

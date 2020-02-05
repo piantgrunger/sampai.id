@@ -4,7 +4,7 @@
 	ob_start();
 	
 ?>
-<?
+<?php
 							$id_ambil_cuti = $_GET['id'];
 
 					$sql_cuti 					="select * from cuti where id_ambil_cuti='$id_ambil_cuti' ";

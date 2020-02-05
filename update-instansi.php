@@ -1,9 +1,9 @@
-<?PHP
+<?php
 include "assets/include/session.php";
 include "assets/include/koneksi.php";
 
 ?>
-<?
+<?php
 		$KODE			= $_GET['KODE'];
 		$sql_utama		= "select * from skpd where id_skpd='$KODE'";
 		$sql_2 			= mysqli_query($conn, $sql_utama);
