@@ -236,12 +236,12 @@ function rupiah_2($angka){
 }
 #table th {
  	  border: 1px solid black;
-padding: 5px;
+padding: 2px;
   
 }
 #table td {
   border: 1px solid black;
-padding: 5px;
+padding: 2px;
 }
 	
         </style>
@@ -263,7 +263,7 @@ padding: 5px;
      <p style="font-size:12px" align="center"> Sistem Informasi Umum Kepegawaian BKPP Kota Banjarbaru @2019</p>
    </div>
    <div id="content">
-  <table width="100%" border="0" style=" font-family:Georgia, "Times New Roman", Times, serif">
+  <table width="100%" border="0" style=" font-family:Georgia, Times New Roman, Times, serif">
   <tr>
     <td align="center" style="font-size:24px"><strong>BERITA ACARA SERAH TERIMA </strong></td>
   </tr>
@@ -272,7 +272,7 @@ padding: 5px;
   </tr>
 </table>
 
-<table width="100%" border="0" style=" font-family:Georgia, "Times New Roman", Times, serif">
+<table width="100%" border="0" style=" font-family:Georgia, Times New Roman, Times, serif">
   <tr>
     <td width="38%" valign="top">&nbsp;</td>
     <td width="2%" valign="top">&nbsp;</td>
@@ -333,7 +333,7 @@ padding: 5px;
     <td valign="top" align="center"><?php echo $i ?></td>
     <td valign="top"><?php echo $nama_barang; ?> <?php echo $keterangan; ?></td>
     <td valign="top"><?php echo $qty;?>
-      <?php  echo $satuan;  ?></td>
+      <?  echo $satuan;  ?></td>
     <td valign="top" align="right"><?php echo rupiah_2($harga); ?></td>
     <td valign="top" align="right"><?php echo rupiah_2($jumlah); ?></td>
   </tr>
@@ -366,7 +366,7 @@ padding: 5px;
     </tr>
 </table>
 <br>
-<table width="100%" border="0" style=" font-family:Georgia, "Times New Roman", Times, serif">
+<table width="100%" border="0" style=" font-family:Georgia, Times New Roman, Times, serif">
 
   <tr>
     <td colspan="3" valign="top">Demikian berita acara serah terima ini dibuat untuk dapat dipergunakan sebagaimana mestinya. </td>
@@ -378,7 +378,7 @@ padding: 5px;
     <td valign="top"></td>
   </tr>
 </table>
-<table width="100%" border="0" style="font-family:Georgia, "Times New Roman", Times, serif">
+<table width="100%" border="0" style="font-family:Georgia, Times New Roman, Times, serif">
   <tr>
     <td width="35%" align="center">&nbsp;</td>
     <td width="15%" align="center">&nbsp;</td>
@@ -429,20 +429,3 @@ $dompdf->stream("SPK No : ".$no_srt.".pdf");
 ?>
 
 
-
-<?php
-include("checklog.php"); 
-require_once("watchlist-controller.php");
-require_once("dompdf/dompdf_config.inc.php");
-ob_start();
-?>
-
-<html>...</html>
-
-<?php
-$html = ob_get_clean();
-$dompdf = new DOMPDF();
-$dompdf->load_html($html);
-$dompdf->render();
-$dompdf->stream("sample.pdf");
-?>

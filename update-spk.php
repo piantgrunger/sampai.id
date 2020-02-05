@@ -1,7 +1,8 @@
-<?php
+<?PHP
 include "assets/include/session-sub-bidang.php";
+
 include "assets/include/koneksi.php";
-$id_spk = $_GET['kd'];
+$id_spk 					= $_GET['kd'];
 $yearsnow					= date("Y");
 
 					$jml_data1_1 				= "SELECT * FROM spk where id_spk='$id_spk' ";
@@ -157,7 +158,7 @@ $yearsnow					= date("Y");
                                          <div class="col-sm-9">
                                             <select class="col-sm-9 select2 form-control custom-select" name="id_distributor">
 											<option value="<?php echo $id_distributor_; ?>"> <?php  echo $nama_dis;?></option>
-														 <?php
+														 <?PHP
 															include "assets/combo/distributor.php";
 															for ($i=0;$i<$count;$i++)
 															{
@@ -287,21 +288,7 @@ $yearsnow					= date("Y");
                                         </div>
                                     </div>
 								
-									<div class="form-group row">
-                                        <label for="lname" class="col-sm-3 text-right control-label col-form-label">PPTK</label>
-                                        <div class="col-sm-9">
-                                           <select class="select2 form-control custom-select" name="id_jabatan">
-										   <option value="<?php echo $id_pejabat_1; ?>" ><?php  echo $nama_pej;?></option>
-														 <?php
-															include "assets/combo/pptk.php";
-															for ($i=0;$i<$count;$i++)
-															{
-															echo "<option value='$id_jabatan[$i]'>$jabatan[$i]";
-															}
-														?>
-											</select>  
-                                        </div>
-										</div>
+									
 									
 									 
                                 </div>

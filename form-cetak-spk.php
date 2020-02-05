@@ -183,7 +183,7 @@ function findage($dob)
 ?>
 
 
-<!DOCTYPE html>
+<html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="shortcut icon" href="img/fav.ico">
@@ -222,12 +222,12 @@ function findage($dob)
 }
 #table th {
  	  border: 1px solid black;
-padding: 5px;
+padding: 2px;
   
 }
 #table td {
   border: 1px solid black;
-padding: 5px;
+padding: 2px;
 }
 	
         </style>
@@ -249,7 +249,7 @@ padding: 5px;
      <p style="font-size:12px" align="center"> Sistem Informasi Umum Kepegawaian BKPP Kota Banjarbaru @2019</p>
    </div>
    <div id="content">
-  <table width="100%" border="0" style=" font-family:Georgia, Times New Roman, Times, serif">
+  <table width="100%" border="0" style=" font-family:Georgia,Times New Roman, Times, serif">
   <tr>
     <td align="center" style="font-size:24px"><strong><?php echo $surt; ?></strong></td>
   </tr>
@@ -258,7 +258,7 @@ padding: 5px;
   </tr>
 </table>
 
-<table width="100%" border="0" style=" font-family:Georgia, Times New Roman, Times, serif">
+<table width="100%" border="0" style=" font-family:Georgia,Times New Roman, Times, serif">
   <tr>
     <td width="30%" valign="top">Diberikan Kepada </td>
     <td width="2%" valign="top">:</td>
@@ -267,7 +267,7 @@ padding: 5px;
   <tr>
     <td valign="top">Perusahaan / Toko </td>
     <td valign="top">:</td>
-    <td valign="top"><?php echo $nama_dis; ?></td>
+    <td valign="top">Times New Romanphp echo $nama_dis; ?></td>
   </tr>
   <tr>
     <td valign="top">Alamat</td>
@@ -286,7 +286,7 @@ padding: 5px;
     <th width="70%" valign="top">Nama dan Spesifikasi Barang </th>
     <th width="25%" valign="top">Banyaknya</th>
   </tr>
-  <?php
+  <?PHP
 				 	$i 			= 1;
               	 	$jml_data1 	= "SELECT * FROM belanja_barang where id_spk='$id_spk' order by id_barang ";
 					$query		= mysqli_query($conn, $jml_data1);
@@ -319,7 +319,7 @@ padding: 5px;
     			?>
 </table>
 <br>
-<table width="100%" border="0" style=" font-family:Georgia, Times New Roman, Times, serif">
+<table width="100%" border="0" style=" font-family:Georgia,Times New Roman, Times, serif">
 
   <tr>
     <td width="30%" valign="top">Keperluan </td>
@@ -346,7 +346,7 @@ padding: 5px;
   </tr>
   <tr>
     <td colspan="3" valign="top">
-<table width="100%" border="0" style=" font-family:Georgia, Times New Roman, Times, serif">
+<table width="100%" border="0" style=" font-family:Georgia,Times New Roman, Times, serif">
       <tr>
         <td width="3%">&nbsp;</td>
         <td width="97%">a. Pembayaran akan dilakukan jika barang - barang tersebut telah diterima dengan baik. </td>
@@ -370,7 +370,7 @@ padding: 5px;
 </table>
 
 
-<table width="100%" border="0" style="font-family:Georgia, Times New Roman, Times, serif">
+<table width="100%" border="0" style="font-family:Georgia,Times New Roman, Times, serif">
   <tr>
     <td align="center" width="50%">&nbsp;</td>
     <td align="center" width="50%">&nbsp;</td>
@@ -417,19 +417,3 @@ $dompdf->stream("SPK No : ".$no_srt.".pdf");
 
 
 
-<?php
-include("checklog.php"); 
-require_once("watchlist-controller.php");
-require_once("dompdf/dompdf_config.inc.php");
-ob_start();
-?>
-
-<html>...</html>
-
-<?php
-$html = ob_get_clean();
-$dompdf = new DOMPDF();
-$dompdf->load_html($html);
-$dompdf->render();
-$dompdf->stream("sample.pdf");
-?>

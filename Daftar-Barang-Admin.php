@@ -183,7 +183,7 @@ function rupiah_2($angka){
                                         <tbody>
 										<?php
 				 	$i 			= 1;
-              	 	$jml_data1 	= "SELECT * FROM BARANG order by nama_barang ";
+              	 	$jml_data1 	= "SELECT * FROM barang order by nama_barang ";
 					$query		= mysqli_query($conn, $jml_data1);
 		
         			while($data = mysqli_fetch_array($query))
