@@ -154,7 +154,7 @@ function rupiah_2($angka){
                     <!-- Column -->
                    <div class="col-md-6">
                         <div class="card">
-                            <form class="form-horizontal" action='assets/include/Input-Belanja.php' method='post' enctype='multipart/form-data'>
+                            <form class="form-horizontal" action='assets/include/input-belanja.php' method='post' enctype='multipart/form-data'>
                                 <div class="card-body">
                                
                              
