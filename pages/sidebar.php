@@ -47,14 +47,14 @@
 						<li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-content-duplicate"></i><span class="hide-menu">Surat Keluar </span></a>
                             <ul aria-expanded="false" class="collapse  first-level">
                                 <li class="sidebar-item"><a href="Data-Surat-Keluar.php" class="sidebar-link"><i class="mdi mdi-subdirectory-arrow-right"></i><span class="hide-menu"> Data Surat Keluar </span></a></li>
-                                <li class="sidebar-item"><a href="Surat-Keluar.php" class="sidebar-link"><i class="mdi mdi-subdirectory-arrow-right"></i><span class="hide-menu"> Input Surat Keluar </span></a></li>
+                                <li class="sidebar-item"><a href="surat-keluar.php" class="sidebar-link"><i class="mdi mdi-subdirectory-arrow-right"></i><span class="hide-menu"> Input Surat Keluar </span></a></li>
                                 
                             </ul>
                         </li>
 						<li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-chart-line"></i><span class="hide-menu">Gaji Berkala </span></a>
                             <ul aria-expanded="false" class="collapse  first-level">
-                                <li class="sidebar-item"><a href="Data-KGB.php" class="sidebar-link"><i class="mdi mdi-subdirectory-arrow-right"></i><span class="hide-menu"> Data Gaji Berkala </span></a></li>
-                                <li class="sidebar-item"><a href="Gaji-Berkala.php" class="sidebar-link"><i class="mdi mdi-subdirectory-arrow-right"></i><span class="hide-menu"> Input Gaji Berkala </span></a></li>
+                                <li class="sidebar-item"><a href="data-kgb.php" class="sidebar-link"><i class="mdi mdi-subdirectory-arrow-right"></i><span class="hide-menu"> Data Gaji Berkala </span></a></li>
+                                <li class="sidebar-item"><a href="gaji-berkala.php" class="sidebar-link"><i class="mdi mdi-subdirectory-arrow-right"></i><span class="hide-menu"> Input Gaji Berkala </span></a></li>
                             </ul>
                         </li>
 						

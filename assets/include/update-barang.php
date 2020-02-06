@@ -24,9 +24,9 @@ $sql 					= mysqli_query($conn, $sql1);
 if ($sql){
 //echo $sql1;
 
-header("location:../../Daftar-Barang-admin.php?pesan=1&isi=Berhasil Update Barang");
+header("location:../../Daftar-Barang-Admin.php?pesan=1&isi=Berhasil Update Barang");
 }else{
-header("location:../../Daftar-Barang-admin.php?pesan=2&isi=Gagal Update Barang ".mysql_error());
+header("location:../../Daftar-Barang-Admin.php?pesan=2&isi=Gagal Update Barang ".mysql_error());
 //echo $sql1;
 }
 ?>

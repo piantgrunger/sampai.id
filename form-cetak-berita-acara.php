@@ -236,12 +236,12 @@ function rupiah_2($angka){
 }
 #table th {
  	  border: 1px solid black;
-padding: 2px;
+padding: 1px;
   
 }
 #table td {
   border: 1px solid black;
-padding: 2px;
+padding: 1px 5px;
 }
 	
         </style>
@@ -259,13 +259,11 @@ padding: 2px;
 
     </div>
    <br>
-   <div id="footer">
-     <p style="font-size:12px" align="center"> Sistem Informasi Umum Kepegawaian BKPP Kota Banjarbaru @2019</p>
-   </div>
+   
    <div id="content">
   <table width="100%" border="0" style=" font-family:Georgia, Times New Roman, Times, serif">
   <tr>
-    <td align="center" style="font-size:24px"><strong>BERITA ACARA SERAH TERIMA </strong></td>
+    <td align="center"><strong>BERITA ACARA SERAH TERIMA </strong></td>
   </tr>
   <tr>
     <td align="center">NOMOR : <?php echo $no_srt; ?></td>
@@ -296,7 +294,6 @@ padding: 2px;
     <td colspan="3" valign="top" align="justify">Pihak Kedua telah menyerahkan barang kepada Pihak Pertama dan Pihak Pertama telah menerimanya dengan baik, cukup dan lengkap di Kantor Badan Kepegawaian, Pendidikan dan Pelatihan Kota Banjarbaru sesuai Surat Perintah Kerja (SPK) Nomor : <?php echo $no_srt; ?> tanggal <?php echo $tgl_buat; ?>. Dengan rincian sebagai berikut : </td>
     </tr>
   </table>
-<br>
   <table width="100%"  id="table">
   <tr>
     <th width="5%" valign="top" align="center">No.</th>
@@ -332,7 +329,7 @@ padding: 2px;
   <tr>
     <td valign="top" align="center"><?php echo $i ?></td>
     <td valign="top"><?php echo $nama_barang; ?> <?php echo $keterangan; ?></td>
-    <td valign="top"><?php echo $qty;?>
+    <td valign="top" align="center"><?php echo $qty;?>
       <?  echo $satuan;  ?></td>
     <td valign="top" align="right"><?php echo rupiah_2($harga); ?></td>
     <td valign="top" align="right"><?php echo rupiah_2($jumlah); ?></td>
@@ -365,7 +362,6 @@ padding: 2px;
 											 echo  $a1;?> Rupiah</td>
     </tr>
 </table>
-<br>
 <table width="100%" border="0" style=" font-family:Georgia, Times New Roman, Times, serif">
 
   <tr>
@@ -392,7 +388,10 @@ padding: 2px;
   <tr>
     <td align="center" valign="top">PIHAK KEDUA, </td>
     <td rowspan="4" align="center"><?php QRcode::png("$kd_unik", "png/$kd_unik.png", "L", 2, 2); ?>
-      <?php echo "<img src='png/$kd_unik.png' />" ?></td>
+      <?php echo "<img src='png/$kd_unik.png' />" ?><br>
+	 <span style="font-family: Verdana, Arial, Helvetica, sans-serif; font-size:6px" >SAMPAi </span><span style="font-family: Verdana, Arial, Helvetica, sans-serif; font-size:5px" ><br>Sistem Administrasi Umum Kepegawaian <br>BKPP-BJB @2020</span>
+	  
+	  </td>
     <td align="center">PIHAK PERTAMA , <br>
       <?php echo $a2; ?></td>
   </tr>
@@ -424,7 +423,7 @@ $html = ob_get_clean();
 $dompdf = new DOMPDF();
 $dompdf->load_html($html);
 $dompdf->render();
-$dompdf->stream("SPK No : ".$no_srt.".pdf");
+$dompdf->stream("BA No : ".$nomor_ba.".pdf");
 
 ?>
 

@@ -1,4 +1,4 @@
-<?php
+<?PHP
 include "assets/include/koneksi.php";
 $yearsnow	= date("Y");
 $tgl_now	= date("d-m-Y");
@@ -209,9 +209,8 @@ function rupiah_2($angka){
                     <div class="col-12 d-flex no-block align-items-center">
                         <h4 class="page-title">
 						<?php 
-						if (isset($jumlah_select_peg)) 
+						if ($jumlah_select_peg != 0) 
 						{
-
 						?>
 						Selamat Ulang Tahun 
 						<?php
@@ -255,7 +254,7 @@ function rupiah_2($angka){
                 <!-- ============================================================== -->
              	 <div class="card">
                 <div class="card-body">
-							                                <h5 class="card-title">Data Agenda Tanggal <?php echo $tgl_now; ?> <?php echo isset($select_pegawai)?$select_pegawai:""; ?></h5> 
+							                                <h5 class="card-title">Data Agenda Tanggal <?php echo $tgl_now; ?> <?php echo $select_pegawai; ?></h5> 
 
 					<div class="row">
 					<?php				
@@ -356,6 +355,12 @@ function rupiah_2($angka){
                             <div class="box bg-<?php echo $bg; ?> text-center">
                                 <h1 class="font-light text-white"><i class="mdi mdi-calendar-check"></i></h1>
                                 <h6 class="text-white">
+								<b><?php echo $acara; ?></b>
+								
+								</h6>
+								
+								
+								<h6 class="text-white">
 								<b><?php echo $hari; ?>, <?php echo $tanggal; ?><br>
 								Jam : <?php echo $waktu; ?> WITA</b>
 								
@@ -366,7 +371,7 @@ function rupiah_2($angka){
 								</h6>
 								<h6 class="text-white">
 								 DI HADIRI OLEH : <strong>
-												 <?php
+												 <?PHP
 												  if ($gelar_blk =='')
 												  {
 												  $namalengkap	= $gelar_dpn;
@@ -407,7 +412,7 @@ function rupiah_2($angka){
 					 
                    
                 </div>
-								<?php
+								<?PHP
 									if (isset($_GET['pesan'])){
 									$pesan = $_GET['pesan'];
 									$isi = $_GET['isi'];
@@ -476,7 +481,7 @@ function rupiah_2($angka){
 									
 								
 								?>
-								 <?php
+								 <?PHP
 								 ?>
                                   <h4 class="alert-heading">
 								  <?php 

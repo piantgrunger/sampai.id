@@ -141,7 +141,7 @@ include "assets/include/koneksi.php";
                                                 <td><strong><?php echo $distributor; ?></strong> <BR> <?php echo $nama_pemilik; ?></td>
 												<td> <?php echo $alamat; ?></a></td>
 												 <td><strong><?php echo $npwp; ?></strong> <BR> <?php echo $rek_bank; ?></td>
-												 <td> <?php echo ( "<a href=Assets/Include/Hapus-Distributor.php?id=$data[0] title='Hapus Data Distributor'> <i class='mdi mdi-delete-empty'></i> </a>")?>				</td>
+												 <td> <?php echo ( "<a href=assets/include/hapus-distributor.php?id=$data[0] title='Hapus Data Distributor'> <i class='mdi mdi-delete-empty'></i> </a>")?>				</td>
 										  </tr>
               
               

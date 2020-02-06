@@ -45,7 +45,6 @@ $tahun					= date("Y");
 $sql1					= "
 							update spk set
 									id_distributor		='$id_distributor',
-									id_pejabat			='$id_jabatan',
 									untuk				='$untuk',
 									keperluan			='$keperluan',
 									hari				='$hari',

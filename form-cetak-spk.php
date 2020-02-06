@@ -1,4 +1,3 @@
-
 <?php
   	include "assets/include/koneksi.php";
 	require_once("dompdf/dompdf_config.inc.php");
@@ -184,7 +183,7 @@ function findage($dob)
 ?>
 
 
-<html>
+<!DOCTYPE html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="shortcut icon" href="img/fav.ico">
@@ -223,12 +222,12 @@ function findage($dob)
 }
 #table th {
  	  border: 1px solid black;
-padding: 2px;
+padding: 1px;
   
 }
 #table td {
   border: 1px solid black;
-padding: 2px;
+padding: 1px 5px;
 }
 	
         </style>
@@ -245,14 +244,11 @@ padding: 2px;
 					</table>
 
     </div>
-   <br>
-   <div id="footer">
-     <p style="font-size:12px" align="center"> Sistem Informasi Umum Kepegawaian BKPP Kota Banjarbaru @2019</p>
-   </div>
+ 	<br>
    <div id="content">
   <table width="100%" border="0" style=" font-family:Georgia,Times New Roman, Times, serif">
   <tr>
-    <td align="center" style="font-size:24px"><strong><?php echo $surt; ?></strong></td>
+    <td align="center"><strong><?php echo $surt; ?></strong></td>
   </tr>
   <tr>
     <td align="center">NOMOR : <?php echo $no_srt; ?></td>
@@ -268,7 +264,7 @@ padding: 2px;
   <tr>
     <td valign="top">Perusahaan / Toko </td>
     <td valign="top">:</td>
-    <td valign="top">Times New Romanphp echo $nama_dis; ?></td>
+    <td valign="top"><?php echo $nama_dis; ?></td>
   </tr>
   <tr>
     <td valign="top">Alamat</td>
@@ -280,14 +276,14 @@ padding: 2px;
     <td valign="top">:</td>
     <td valign="top"><?php echo $untuk; ?></td>
   </tr>
-  </table><br>
+  </table>
   <table width="100%"  id="table">
   <tr>
     <th width="5%" valign="top" align="center">No.</th>
     <th width="70%" valign="top">Nama dan Spesifikasi Barang </th>
     <th width="25%" valign="top">Banyaknya</th>
   </tr>
-  <?PHP
+  <?php
 				 	$i 			= 1;
               	 	$jml_data1 	= "SELECT * FROM belanja_barang where id_spk='$id_spk' order by id_barang ";
 					$query		= mysqli_query($conn, $jml_data1);
@@ -312,14 +308,15 @@ padding: 2px;
   <tr>
     <td valign="top" align="center"><?php echo $i ?></td>
     <td valign="top"><?php echo $nama_barang; ?> <?php echo $keterangan; ?></td>
-    <td valign="top"><?php echo $qty;?> <?php  echo $satuan;  ?></td>
+    <td valign="top" align="right"><?php echo $qty;?> <?php  echo $satuan;  ?></td>
   </tr>
    <?php
        			 $i++;
         			}
     			?>
 </table>
-<br>
+
+
 <table width="100%" border="0" style=" font-family:Georgia,Times New Roman, Times, serif">
 
   <tr>
@@ -381,7 +378,12 @@ padding: 2px;
     <td align="center">Banjarbaru, <?php echo $tgl_buat; ?></td>
   </tr>
   <tr>
-    <td rowspan="4" align="left"><?php QRcode::png("$kd_unik", "png/$kd_unik.png", "L", 4, 4); ?><?php echo "<img src='png/$kd_unik.png' />" ?></td>
+    <td rowspan="4" align="left"><?php QRcode::png("$kd_unik", "png/$kd_unik.png", "L", 4, 4); ?>
+      <?php echo "<img src='png/$kd_unik.png' />" ?>
+	  <br>
+	 <span style="font-family:  Verdana, Arial, Helvetica, sans-serif; font-size:8px" >SAMPAi </span><span style="font-family: Verdana, Arial, Helvetica, sans-serif; font-size:6px" ><br>Sistem Administrasi Umum Kepegawaian <br>BKPP-BJB @2020</span>
+	  
+	  </td>
     <td align="center">Yang Memerintahkan, <br>
 	Pejabat Pengelola Teknis Kegiatan </td>
   </tr>
@@ -415,4 +417,6 @@ $dompdf->render();
 $dompdf->stream("SPK No : ".$no_srt.".pdf");
 
 ?>
+
+
 

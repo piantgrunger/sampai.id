@@ -1,6 +1,6 @@
 <?php
 include("koneksi.php");
-$id = $_GET['KODE'];
+$id = $_GET['id'];
 
 		
 				$sql_00		= "select * from belanja_barang where id_belanja='$id'";
