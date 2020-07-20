@@ -1,4 +1,43 @@
- <header class="topbar" data-navbarbg="skin5">
+<?php
+ $id_user = $id_admin;
+ 
+ 	$sql_admin 			= "select * from users where id='$id_user' ";
+	$query_admin 		= mysqli_query ($conn, $sql_admin);
+	$data_admin 		= mysqli_fetch_array($query_admin);
+	
+	$kategori_admin		= $data_admin['kategori'];
+	
+	if ($kategori_admin =='Admin Sub Bidang')
+		{
+					$jml_pesan_1 				= "SELECT * FROM spk where id_user='$id_admin' and status ='0' ";
+					$query_pesan_1				= mysqli_query($conn, $jml_pesan_1);
+					$total_jml_pesan_1			= mysqli_num_rows($query_pesan_1);
+					
+					$jml_pesan_2 				= "SELECT * FROM spk where id_user='$id_admin' and status ='1' and nomor_ba='' ";
+					$query_pesan_2				= mysqli_query($conn, $jml_pesan_2);
+					$total_jml_pesan_2			= mysqli_num_rows($query_pesan_2);
+					
+					$jml_total_pesan			= $total_jml_pesan_1 + $total_jml_pesan_2;
+					
+					
+		
+		}
+	else if ($kategori_admin =='Admin Persediaan')
+	{
+					$jml_pesan_1 				= "SELECT * FROM spk where status ='0' ";
+					$query_pesan_1				= mysqli_query($conn, $jml_pesan_1);
+					$total_jml_pesan_1			= mysqli_num_rows($query_pesan_1);
+					
+					$jml_pesan_2 				= "SELECT * FROM spk where status ='1' and nomor_ba='' ";
+					$query_pesan_2				= mysqli_query($conn, $jml_pesan_2);
+					$total_jml_pesan_2			= mysqli_num_rows($query_pesan_2);
+					
+					$jml_total_pesan			= $total_jml_pesan_1 + $total_jml_pesan_2;
+	}
+ ?>
+
+
+<header class="topbar" data-navbarbg="skin5">
             <nav class="navbar top-navbar navbar-expand-md navbar-dark">
                 <div class="navbar-header" data-logobg="skin5">
                     <!-- This is for the sidebar toggle which is visible on mobile only -->
@@ -65,14 +104,7 @@
                         <!-- ============================================================== -->
                         <!-- Comment -->
                         <!-- ============================================================== -->
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="mdi mdi-bell font-24"></i>                            </a>
-                             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="#">Action</a>
-                                <a class="dropdown-item" href="#">Another action</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="#">Something else here</a>                            </div>
-                        </li>
+                       
                         <!-- ============================================================== -->
                         <!-- End Comment -->
                         <!-- ============================================================== -->
@@ -80,47 +112,73 @@
                         <!-- Messages -->
                         <!-- ============================================================== -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" id="2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="font-24 mdi mdi-comment-processing"></i>                            </a>
+                           <?php
+                            if ($jml_total_pesan== 0)
+                            {
+                            ?>
+                            <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" id="2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="font-24 mdi mdi-bell-off"></i> 
+                            <?php
+                            }
+                            else
+                            {
+                            ?>
+                            <a class="nav-link dropdown-toggle waves-effect waves-dark" href="" id="2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> <i class="font-24 mdi mdi-bell-ring"></i> 
+                            <span class="badge badge-pill badge-warning"><?php echo $jml_total_pesan;?></span>                            
+
+                            <?php
+                            }
+                            ?>
+
+                            </a>      
                             <div class="dropdown-menu dropdown-menu-right mailbox animated bounceInDown" aria-labelledby="2">
                                 <ul class="list-style-none">
                                     <li>
                                         <div class="">
-                                             <!-- Message -->
+                                        
+										<?php
+										if ($total_jml_pesan_1 == 0)
+										{
+										
+										}
+										else
+										{
+										?>
+										 <!-- Message -->
                                             <a href="javascript:void(0)" class="link border-top">
                                                 <div class="d-flex no-block align-items-center p-10">
-                                                    <span class="btn btn-success btn-circle"><i class="ti-calendar"></i></span>
+                                                    <span class="btn btn-success btn-circle"><i class="ti-settings"></i></span>
                                                     <div class="m-l-10">
-                                                        <h5 class="m-b-0">Event today</h5> 
-                                                        <span class="mail-desc">Just a reminder that event</span>                                                    </div>
+                                                        <h5 class="m-b-0">Belum Selesai Belanja</h5> 
+                                                        <span class="mail-desc">Terdapat <?php echo $total_jml_pesan_1; ?> SPO/SPK Anda yang Belum Selesai Belanja</span>                                                    </div>
                                                 </div>
                                             </a>
-                                            <!-- Message -->
-                                            <a href="javascript:void(0)" class="link border-top">
-                                                <div class="d-flex no-block align-items-center p-10">
-                                                    <span class="btn btn-info btn-circle"><i class="ti-settings"></i></span>
-                                                    <div class="m-l-10">
-                                                        <h5 class="m-b-0">Settings</h5> 
-                                                        <span class="mail-desc">You can customize this template</span>                                                    </div>
-                                                </div>
-                                            </a>
-                                            <!-- Message -->
+										<?php
+										}
+										
+										?>
+										
+										<?php
+										if ($total_jml_pesan_2 == 0)
+										{
+										
+										}
+										else
+										{
+										?>
+										 <!-- Message -->
                                             <a href="javascript:void(0)" class="link border-top">
                                                 <div class="d-flex no-block align-items-center p-10">
                                                     <span class="btn btn-primary btn-circle"><i class="ti-user"></i></span>
                                                     <div class="m-l-10">
-                                                        <h5 class="m-b-0">Pavan kumar</h5> 
-                                                        <span class="mail-desc">Just see the my admin!</span>                                                    </div>
+                                                        <h5 class="m-b-0">Belum Berita Acara</h5> 
+                                                        <span class="mail-desc">Terdapat <?php echo $total_jml_pesan_2; ?> Belum di Approve oleh Admin Persediaan</span>                                                    </div>
                                                 </div>
                                             </a>
-                                            <!-- Message -->
-                                            <a href="javascript:void(0)" class="link border-top">
-                                                <div class="d-flex no-block align-items-center p-10">
-                                                    <span class="btn btn-danger btn-circle"><i class="fa fa-link"></i></span>
-                                                    <div class="m-l-10">
-                                                        <h5 class="m-b-0">Luanch Admin</h5> 
-                                                        <span class="mail-desc">Just see the my new admin!</span>                                                    </div>
-                                                </div>
-                                            </a>                                        </div>
+										<?php
+										}
+										
+										?>    
+                                      </div>
                                     </li>
                                 </ul>
                             </div>

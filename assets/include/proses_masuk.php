@@ -47,7 +47,12 @@ if ( $count != 0 )
 		//$sql_online = mysql_query("UPDATE `users` SET `on`=1, `log`='$log' WHERE email='$email'"); //membuat user menjadi online
 		header("location:../../Admin-Sub-Bidang.php");
 		}
-		
+		elseif ($kategori=='Admin Anjab')
+		{
+		$log = date("H:i d M Y");
+		$_SESSION['session_login_by_id'] = $id_user;
+		header("location:../../Admin-Anjab.php");
+		}
 		else
 		{
 		echo "Salah";

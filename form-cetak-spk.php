@@ -116,7 +116,7 @@
 	}
 	
 	
-													$no_srt	= $klasifikasi_surat;
+												$no_srt	= $klasifikasi_surat;
 												  $no_srt	.= '/';
 												  $no_srt	.= $nomor_spk;
 												  $no_srt	.= '/';
@@ -194,15 +194,15 @@ function findage($dob)
 
         <!-- Bootstrap -->
       
-		<style>
-  @page {  
-	 margin-top: 100px; 
-	 margin-bottom: 0px;  
+	<style>
+ @page {  
+	 margin-top: 105px; 
+	 margin-bottom: 20px;  
 	 margin-left:50px; 
 	 margin-right:50px; 
 	 size:A4 potrait;
 		}
-     #header { position: fixed; left: 0px; top: -100px; right: 0px; height: 100px;  text-align: center; padding-top:5px;  }
+     #header { position: fixed; left: 0px; top: -105px; right: 0px; height: 105px;  text-align: center; text padding-top:5px;  }
     
 	 #footer {
 	
@@ -228,8 +228,58 @@ padding: 1px;
 #table td {
   border: 1px solid black;
 padding: 1px 5px;
+}	
+
+
+#table1 {
+
+    border-collapse: collapse;
+
+ 
 }
-	
+#table1 th {
+ 	  border: 1px solid black;
+padding: 10px;
+  
+}
+#table1 td {
+  border: 1px solid black;
+padding: 10px 5px;
+}	
+
+#table2 {
+
+    border-collapse: collapse;
+
+ 
+}
+#table2 th {
+ 	  border: 1px solid black;
+padding: 6px;
+  
+}
+#table2 td {
+  border: 1px solid black;
+padding: 6px 5px;
+}	
+
+#table3 {
+
+    border-collapse: collapse;
+
+ 
+}
+#table3 th {
+ 	  border: 1px solid black;
+padding: 2px;
+  
+}
+#table3 td {
+  border: 1px solid black;
+padding: 2px 5px;
+}	
+
+
         </style>
 		
     </head>
@@ -238,24 +288,49 @@ padding: 1px 5px;
     <div id="header">
 					<table width="100%" border="0">
 					<tr>
-					<td  valign="middle" align="center"><img src="assets/images/kop.jpg" width="700"  ></td>
-				
+					<td  valign="middle" align="center"><img src="assets/images/kop.jpg" width="700" height="100"  > </td>
 					</tr>
 					</table>
 
     </div>
- 	<br>
+	
    <div id="content">
-  <table width="100%" border="0" style=" font-family:Georgia,Times New Roman, Times, serif">
+      <?php
+   	$jml_data1_11111 	= "SELECT * FROM belanja_barang where id_spk='$id_spk' order by id_barang ";
+	$query_11111		= mysqli_query($conn, $jml_data1_11111);
+	$data_jumlah 		= mysqli_num_rows($query_11111);
+   
+  
+   if ($data_jumlah >= 18 and $data_jumlah <= 23 )
+   {
+   $id_tab	='table1';
+   }
+   
+   elseif ($data_jumlah >= 24 and $data_jumlah <= 32 )
+   {
+   $id_tab	='table2';
+   }
+    elseif ($data_jumlah >= 33  )
+   {
+   $id_tab	='table3';
+   }
+  
+   else
+   {
+    $id_tab	='table';
+   }
+   ?>
+  <table width="100%" border="0" style=" font-family:Georgia, Times New Roman, Times, serif">
   <tr>
     <td align="center"><strong><?php echo $surt; ?></strong></td>
   </tr>
   <tr>
-    <td align="center">NOMOR : <?php echo $no_srt; ?></td>
+    <td align="center">NOMOR : <?php echo $no_srt; ?>
+      <?php //echo $id_tab; ?></td>
   </tr>
 </table>
 
-<table width="100%" border="0" style=" font-family:Georgia,Times New Roman, Times, serif">
+<table width="100%" border="0" style=" font-family:Georgia, Times New Roman, Times, serif">
   <tr>
     <td width="30%" valign="top">Diberikan Kepada </td>
     <td width="2%" valign="top">:</td>
@@ -277,12 +352,14 @@ padding: 1px 5px;
     <td valign="top"><?php echo $untuk; ?></td>
   </tr>
   </table>
-  <table width="100%"  id="table">
+  <table width="100%"  id="<?php echo $id_tab; ?>">
+  <thead> 
   <tr>
     <th width="5%" valign="top" align="center">No.</th>
     <th width="70%" valign="top">Nama dan Spesifikasi Barang </th>
     <th width="25%" valign="top">Banyaknya</th>
   </tr>
+  </thead>
   <?php
 				 	$i 			= 1;
               	 	$jml_data1 	= "SELECT * FROM belanja_barang where id_spk='$id_spk' order by id_barang ";
@@ -317,7 +394,7 @@ padding: 1px 5px;
 </table>
 
 
-<table width="100%" border="0" style=" font-family:Georgia,Times New Roman, Times, serif">
+<table width="100%" border="0" style=" font-family:Georgia, Times New Roman, Times, serif">
 
   <tr>
     <td width="30%" valign="top">Keperluan </td>
@@ -344,7 +421,7 @@ padding: 1px 5px;
   </tr>
   <tr>
     <td colspan="3" valign="top">
-<table width="100%" border="0" style=" font-family:Georgia,Times New Roman, Times, serif">
+<table width="100%" border="0" style=" font-family:Georgia, Times New Roman, Times, serif">
       <tr>
         <td width="3%">&nbsp;</td>
         <td width="97%">a. Pembayaran akan dilakukan jika barang - barang tersebut telah diterima dengan baik. </td>
@@ -368,22 +445,20 @@ padding: 1px 5px;
 </table>
 
 
-<table width="100%" border="0" style="font-family:Georgia,Times New Roman, Times, serif">
+<table width="100%" border="0" style="font-family:Georgia, Times New Roman, Times, serif">
   <tr>
-    <td align="center" width="50%">&nbsp;</td>
-    <td align="center" width="50%">&nbsp;</td>
+    <td align="center" width="50%"></td>
+    <td align="center" width="50%"></td>
   </tr>
   <tr>
     <td align="center">&nbsp;</td>
     <td align="center">Banjarbaru, <?php echo $tgl_buat; ?></td>
   </tr>
   <tr>
-    <td rowspan="4" align="left"><?php QRcode::png("$kd_unik", "png/$kd_unik.png", "L", 4, 4); ?>
+    <td rowspan="4" align="left"><?php QRcode::png("$kd_unik", "png/$kd_unik.png", "L", 3, 3); ?>
       <?php echo "<img src='png/$kd_unik.png' />" ?>
 	  <br>
-	 <span style="font-family:  Verdana, Arial, Helvetica, sans-serif; font-size:8px" >SAMPAi </span><span style="font-family: Verdana, Arial, Helvetica, sans-serif; font-size:6px" ><br>Sistem Administrasi Umum Kepegawaian <br>BKPP-BJB @2020</span>
-	  
-	  </td>
+	 <span style="font-family:  Verdana, Arial, Helvetica, sans-serif; font-size:8px" >SAMPAi </span><span style="font-family: Verdana, Arial, Helvetica, sans-serif; font-size:6px" ><br>Sistem Administrasi Umum Kepegawaian <br>BKPP-BJB @2020</span>	  </td>
     <td align="center">Yang Memerintahkan, <br>
 	Pejabat Pengelola Teknis Kegiatan </td>
   </tr>
@@ -399,6 +474,14 @@ padding: 1px 5px;
 	
 	  <?php echo $golongan ?><br>
 	NIP. <?php echo $nip ?>	</td>
+  </tr>
+  <tr>
+    <td align="left">&nbsp;</td>
+    <td align="center">&nbsp;</td>
+  </tr>
+  <tr>
+    <td align="left">&nbsp;</td>
+    <td align="center">&nbsp;</td>
   </tr>
 </table>
 
@@ -417,6 +500,3 @@ $dompdf->render();
 $dompdf->stream("SPK No : ".$no_srt.".pdf");
 
 ?>
-
-
-

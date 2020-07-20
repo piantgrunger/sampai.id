@@ -23,6 +23,21 @@
 						 
 						 
 						 </li>
+						<li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark" href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-message-text-outline"></i><span class="hide-menu">Kwitansi </span></a>
+
+						  <ul aria-expanded="false" class="collapse  first-level">
+                                <li class="sidebar-item"><a href="kwitansi-barang.php" class="sidebar-link"><i class="mdi mdi-subdirectory-arrow-right"></i><span class="hide-menu"> Belanja Barang </span></a></li>
+                                <li class="sidebar-item"><a href="kwitansi-jasa.php" class="sidebar-link"><i class="mdi mdi-subdirectory-arrow-right"></i><span class="hide-menu"> Jasa </span></a></li>
+								<li class="sidebar-item"><a href="kwitansi-sewa.php" class="sidebar-link"><i class="mdi mdi-subdirectory-arrow-right"></i><span class="hide-menu"> Sewa </span></a></li>
+								<li class="sidebar-item"><a href="kwitansi-cetak.php" class="sidebar-link"><i class="mdi mdi-subdirectory-arrow-right"></i><span class="hide-menu"> Cetak, Penggandaan </span></a></li>
+								<li class="sidebar-item"><a href="kwitansi-makan-minum.php" class="sidebar-link"><i class="mdi mdi-subdirectory-arrow-right"></i><span class="hide-menu"> Makan Minum </span></a></li>
+                <li class="sidebar-item"><a href="kwitansi-honor.php" class="sidebar-link"><i class="mdi mdi-subdirectory-arrow-right"></i><span class="hide-menu"> Honorarium </span></a></li>
+
+                                
+                            </ul>
+						 
+						 
+						 </li>
 
 						
 						

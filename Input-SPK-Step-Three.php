@@ -1,4 +1,4 @@
-<?PHP
+<?php
 include "assets/include/session-sub-bidang.php";
 include "assets/include/koneksi.php";
 $id_spk 			= $_GET['KODE'];
@@ -9,7 +9,7 @@ $id_spk 			= $_GET['KODE'];
 		
         			$data_cek	= mysqli_fetch_array($query_cek);
 				
-					$no_ba		 	= $data_cek['nomor_ba'];
+					$no_ba		= $data_cek['nomor_ba'];
 
 ?>
 <?php
@@ -68,6 +68,7 @@ function rupiah_2($angka){
 }
 ?>
 
+<!DOCTYPE html>
 <html dir="ltr" lang="en">
 
 <head>
@@ -160,7 +161,7 @@ function rupiah_2($angka){
                     <!-- Column -->
                    <div class="col-md-6">
                         <div class="card">
-                            <form class="form-horizontal" action='assets/include/Input-Belanja.php' method='post' enctype='multipart/form-data'>
+                            <form class="form-horizontal" action='assets/include/input-belanja.php' method='post' enctype='multipart/form-data'>
                                 <div class="card-body">
                                
                              
@@ -168,7 +169,7 @@ function rupiah_2($angka){
                                         <label for="cono1" class="col-sm-3 text-right control-label col-form-label">Nama Barang</label>
                                        <div class="col-sm-9">
                                              <select class="select2 form-control custom-select" name="id_barang">
-														 <?PHP
+														 <?php
 															include "assets/combo/barang.php";
 															for ($i=0;$i<$count;$i++)
 															{
@@ -204,24 +205,8 @@ function rupiah_2($angka){
                                 <div class="border-top">
                                     <div class="card-body">
 									
-									<?php
-														if ($no_ba !=' ')
-														{
-													  												    
-														}
-														else
-														{
-														?>
-														 <button type="submit" class="btn btn-primary">Mari Belanja</button> 
-														<?php														
-														}
-														?>
-									
-									
-									
-									
-									
-									
+								       <button type="submit" class="btn btn-primary">Mari Belanja</button> 
+							
                                        <button type="reset" class="btn btn-danger">Cancel</button>  
                                     </div>
                                 </div>
@@ -276,18 +261,8 @@ function rupiah_2($angka){
 												<td align="right"> <?php echo rupiah_2($harga); ?></td>
 												<td align="right"> <?php echo rupiah_2($jumlah); ?></td>
 												<td>
-												<?php
-														if ($no_ba !=' ')
-														{
-													  												    
-														}
-														else
-														{
-														?>
-<?php echo ( "<a href=assets/include/hapus-belanja.php?id=$data[0] title='Hapus Data Belanja'> <i class='mdi mdi-delete-empty'></i> </a>")?>						
-                          <?php
-														}
-														?>
+												<?php echo ( "<a href=assets/include/hapus-belanja.php?id=$data[0] title='Hapus Data Belanja'> <i class='mdi mdi-delete-empty'></i> </a>")?>														
+
 												
 												
 												

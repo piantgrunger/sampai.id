@@ -101,7 +101,7 @@ $tidakpuas 		= $jumlah_select_3/$jumlah_select_ * 100;
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="#">Selamat Datang </a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Buku Tamu</li>
+                                    <li class="breadcrumb-item active" aria-current="page">Nilai Kami</li>
                                 </ol>
                             </nav>
                         </div>

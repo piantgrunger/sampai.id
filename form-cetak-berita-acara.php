@@ -119,10 +119,10 @@
 	}
 	
 	
-												$no_srt	= $klasifikasi_surat;
+												  $no_srt	= $klasifikasi_surat;
 												  $no_srt	.= '/';
 												  $no_srt	.= $nomor_ba;
-												  $no_srt	.= '/';
+												  $no_srt	.= '-HP/';
 												  $no_srt	.= $singkat;
 												  $no_srt	.= '-BKPP';
 	?>
@@ -209,14 +209,14 @@ function rupiah_2($angka){
         <!-- Bootstrap -->
       
 		<style>
-  @page {  
-	 margin-top: 100px; 
-	 margin-bottom: 0px;  
+ @page {  
+	 margin-top: 110px; 
+	 margin-bottom: 20px;  
 	 margin-left:50px; 
 	 margin-right:50px; 
 	 size:A4 potrait;
 		}
-     #header { position: fixed; left: 0px; top: -100px; right: 0px; height: 100px;  text-align: center; padding-top:5px;  }
+     #header { position: fixed; left: 0px; top: -110px; right: 0px; height: 110px;  text-align: center; text padding-top:5px;  }
     
 	 #footer {
 	
@@ -242,39 +242,112 @@ padding: 1px;
 #table td {
   border: 1px solid black;
 padding: 1px 5px;
+}	
+
+
+#table1 {
+
+    border-collapse: collapse;
+
+ 
 }
-	
+#table1 th {
+ 	  border: 1px solid black;
+padding: 10px;
+  
+}
+#table1 td {
+  border: 1px solid black;
+padding: 10px 5px;
+}	
+
+#table2 {
+
+    border-collapse: collapse;
+
+ 
+}
+#table2 th {
+ 	  border: 1px solid black;
+padding: 5px;
+  
+}
+#table2 td {
+  border: 1px solid black;
+padding: 5px 5px;
+}	
+
+#table3 {
+
+    border-collapse: collapse;
+
+ 
+}
+#table3 th {
+ 	  border: 1px solid black;
+padding: 2px;
+  
+}
+#table3 td {
+  border: 1px solid black;
+padding: 2px 5px;
+}	
+
+
         </style>
 		
     </head>
 
     <body>
     <div id="header">
-					<table width="100%" border="0">
+				<table width="100%" border="0">
 					<tr>
-					<td  valign="middle" align="center"><img src="assets/images/kop.jpg" width="700"  ></td>
-				
+					<td  valign="middle" align="center"><img src="assets/images/kop.jpg" width="700" height="100"  > </td>
 					</tr>
 					</table>
 
     </div>
-   <br>
    
    <div id="content">
-  <table width="100%" border="0" style=" font-family:Georgia, Times New Roman, Times, serif">
+   <?php
+   	$jml_data1_11111 	= "SELECT * FROM belanja_barang where id_spk='$id_spk' order by id_barang ";
+	$query_11111		= mysqli_query($conn, $jml_data1_11111);
+	$data_jumlah 		= mysqli_num_rows($query_11111);
+   
+  
+   if ($data_jumlah >= 16 and $data_jumlah <= 18 )
+   {
+   $id_tab	='table1';
+   }
+   
+   elseif ($data_jumlah >= 19 and $data_jumlah <= 22 )
+   {
+   $id_tab	='table2';
+   }
+    elseif ($data_jumlah >= 23  )
+   {
+   $id_tab	='table3';
+   }
+  
+   else
+   {
+    $id_tab	='table';
+   }
+   ?>
+  <table  width="100%" border="0" style=" font-family:Georgia, Times New Roman, Times, serif">
   <tr>
     <td align="center"><strong>BERITA ACARA SERAH TERIMA </strong></td>
   </tr>
   <tr>
-    <td align="center">NOMOR : <?php echo $no_srt; ?></td>
+    <td align="center">NOMOR : <?php echo $no_srt; ?> <?php //echo $id_tab; ?></td>
   </tr>
 </table>
 
 <table width="100%" border="0" style=" font-family:Georgia, Times New Roman, Times, serif">
   <tr>
-    <td width="38%" valign="top">&nbsp;</td>
-    <td width="2%" valign="top">&nbsp;</td>
-    <td width="60%" valign="top">&nbsp;</td>
+    <td width="38%" valign="top"></td>
+    <td width="2%" valign="top"></td>
+    <td width="60%" valign="top"></td>
   </tr>
   <tr>
     <td colspan="3" valign="top" align="justify">Pada hari ini <?php  echo $hari;?>, Tanggal <?php  echo ucwords(terbilang($tgl_lantik));?> Bulan <?php  echo $bln_lantik;?> Tahun  <?php  echo ucwords(terbilang($thn_lantik));?> kami yang bertanda tangan dibawah ini : </td>
@@ -294,14 +367,16 @@ padding: 1px 5px;
     <td colspan="3" valign="top" align="justify">Pihak Kedua telah menyerahkan barang kepada Pihak Pertama dan Pihak Pertama telah menerimanya dengan baik, cukup dan lengkap di Kantor Badan Kepegawaian, Pendidikan dan Pelatihan Kota Banjarbaru sesuai Surat Perintah Kerja (SPK) Nomor : <?php echo $no_srt; ?> tanggal <?php echo $tgl_buat; ?>. Dengan rincian sebagai berikut : </td>
     </tr>
   </table>
-  <table width="100%"  id="table">
+  <table width="100%"  id="<?php echo $id_tab; ?>">
+  <thead>
   <tr>
     <th width="5%" valign="top" align="center">No.</th>
-    <th width="50%" valign="top">Nama dan Spesifikasi Barang </th>
-    <th width="10%" valign="top">Banyaknya</th>
+    <th width="45%" valign="top">Nama dan Spesifikasi Barang </th>
+    <th width="15%" valign="top">Banyaknya</th>
     <th width="15%" valign="top">Satuan (Rp.) </th>
     <th width="20%" valign="top">Jumlah (Rp.)</th>
   </tr>
+  </thead>
   <?php
 				 	$i 			= 1;
               	 	$jml_data1 	= "SELECT * FROM belanja_barang where id_spk='$id_spk' order by id_barang ";
@@ -330,7 +405,7 @@ padding: 1px 5px;
     <td valign="top" align="center"><?php echo $i ?></td>
     <td valign="top"><?php echo $nama_barang; ?> <?php echo $keterangan; ?></td>
     <td valign="top" align="center"><?php echo $qty;?>
-      <?  echo $satuan;  ?></td>
+      <?=$satuan;  ?></td>
     <td valign="top" align="right"><?php echo rupiah_2($harga); ?></td>
     <td valign="top" align="right"><?php echo rupiah_2($jumlah); ?></td>
   </tr>
@@ -376,14 +451,14 @@ padding: 1px 5px;
 </table>
 <table width="100%" border="0" style="font-family:Georgia, Times New Roman, Times, serif">
   <tr>
-    <td width="35%" align="center">&nbsp;</td>
-    <td width="15%" align="center">&nbsp;</td>
-    <td width="50%" align="center">&nbsp;</td>
+    <td width="35%" align="center"></td>
+    <td width="15%" align="center"></td>
+    <td width="50%" align="center"></td>
   </tr>
   <tr>
     <td align="center">&nbsp;</td>
     <td align="center">&nbsp;</td>
-    <td align="center">Banjarbaru, <?php echo $tgl_buat; ?></td>
+    <td align="center">Banjarbaru, <?php echo $tgl_serah; ?></td>
   </tr>
   <tr>
     <td align="center" valign="top">PIHAK KEDUA, </td>

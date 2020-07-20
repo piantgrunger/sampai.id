@@ -1,8 +1,68 @@
-<?php
+<?PHP
 include "assets/include/session-sub-bidang.php";
 include "assets/include/koneksi.php";
+$yearsnow	= date("Y");
 
-?><!DOCTYPE html>
+?>
+<?php
+function penyebut($nilai) {
+		$nilai = abs($nilai);
+		$huruf = array("", "satu", "dua", "tiga", "empat", "lima", "enam", "tujuh", "delapan", "sembilan", "sepuluh", "sebelas");
+		$temp = "";
+		if ($nilai < 12) {
+			$temp = " ". $huruf[$nilai];
+		} else if ($nilai <20) {
+			$temp = penyebut($nilai - 10). " belas";
+		} else if ($nilai < 100) {
+			$temp = penyebut($nilai/10)." puluh". penyebut($nilai % 10);
+		} else if ($nilai < 200) {
+			$temp = " seratus" . penyebut($nilai - 100);
+		} else if ($nilai < 1000) {
+			$temp = penyebut($nilai/100) . " ratus" . penyebut($nilai % 100);
+		} else if ($nilai < 2000) {
+			$temp = " seribu" . penyebut($nilai - 1000);
+		} else if ($nilai < 1000000) {
+			$temp = penyebut($nilai/1000) . " ribu" . penyebut($nilai % 1000);
+		} else if ($nilai < 1000000000) {
+			$temp = penyebut($nilai/1000000) . " juta" . penyebut($nilai % 1000000);
+		} else if ($nilai < 1000000000000) {
+			$temp = penyebut($nilai/1000000000) . " milyar" . penyebut(fmod($nilai,1000000000));
+		} else if ($nilai < 1000000000000000) {
+			$temp = penyebut($nilai/1000000000000) . " trilyun" . penyebut(fmod($nilai,1000000000000));
+		}     
+		return $temp;
+	}
+
+	function terbilang($nilai) {
+		if($nilai<0) {
+			$hasil = "minus ". trim(penyebut($nilai));
+		} else {
+			$hasil = trim(penyebut($nilai));
+		}     		
+		return $hasil;
+	}
+?>
+<?php
+function rupiah($angka){
+	
+	$hasil_rupiah = "Rp " . number_format($angka,2,',','.');
+	return $hasil_rupiah;
+ 
+}
+?>
+
+<?php
+function rupiah_2($angka){
+	
+	$hasil_rupiah =  number_format($angka,2,',','.');
+	return $hasil_rupiah;
+ 
+}
+?>
+
+
+
+<!DOCTYPE html>
 <html dir="ltr" lang="en">
 
 <head>
@@ -92,7 +152,7 @@ include "assets/include/koneksi.php";
                 <!-- ============================================================== -->
                   <div class="card">
                             <div class="card-body">
-								<?php
+								<?PHP
 									if (isset($_GET['pesan'])){
 									$pesan = $_GET['pesan'];
 									$isi = $_GET['isi'];
@@ -115,11 +175,11 @@ include "assets/include/koneksi.php";
                                         <thead>
                                             <tr>
                                                 <th width="3%">NO</th>
-                                                <th width="20%">PPTK</th>
-                                                <th width="15%">DISTRIBUTOR </th>
-												<th width="25%">DISKRIPSI </th>
-												<th width="15%">TANGGAL</th>
-												<th width="15%">KET.</th>
+                                                <th width="17%">PPTK</th>
+                                                <th width="10%">DISTRIBUTOR </th>
+                                                <th width="25%">DISKRIPSI </th>
+                                                <th width="17%">TANGGAL</th>
+                                                <th width="17%">KET.</th>
                                                 <th width="10%">ACT</th>
                                             </tr>
                                         </thead>
@@ -135,15 +195,8 @@ include "assets/include/koneksi.php";
 					$id_jabatan		 	= $data['id_pejabat'];
 					$nomor_ba		 	= $data['nomor_ba'];
 					$id_spk			 	= $data['id_spk'];
+					$status			 	= $data['status'];
 					
-					if ($nomor_ba == '')
-					{
-					$ket_ba ='Belum Bisa Cetak Berita Acara Silahkan Hub Admin';
-					}
-					else
-					{
-					$ket_ba ='Bisa Cetak Berita Acara';
-					}
 					
 					
 					
@@ -166,7 +219,21 @@ include "assets/include/koneksi.php";
 					}
 					else
 					{
-					$status_	 = ' ';
+				
+					$sql_00001			= "select SUM(jumlah) as jumlah_total from belanja_barang where id_spk='$id_spk' ";
+					$sql_kk001 			= mysqli_query($conn, $sql_00001);
+					$data_p1 			= mysqli_fetch_array($sql_kk001);
+					$jumlah_total	 	= $data_p1['0'];
+												
+												//echo $sql_00001;
+					
+					$status_	= 'Jml. Belanja Rp. ';
+					$status_	 .= rupiah_2($jumlah_total); 
+	
+											//$angka		= terbilang($jumlah_total);
+											//$a1 		= ucwords($angka);
+										
+				
 					}
 					
 					
@@ -179,17 +246,70 @@ include "assets/include/koneksi.php";
 												    <td> <strong>Untuk :</strong> <?php echo $data['untuk'] ?> <br>
 													<strong>Keperluan :</strong> <?php echo $data['keperluan'] ?></td>
 												<td><strong>Pembuatan :</strong>  <?php echo $data['tgl_buat'] ?><br>
-												<strong>Penyerahan :</strong> <?php echo $data['tgl_serah'] ?></td>
-												    <td><strong><?php echo $ket_ba; ?></strong>
-													<?php echo $status_; ?><br>
+													<strong>Penyerahan :</strong> <?php echo $data['tgl_serah'] ?></td>
+												    <td>
+                              <?php
+														if ($nomor_ba == '')
+														{
+														?>
+														<button type="button" class="btn btn-warning"><i class='mdi mdi-close-box-outline'></i> Belum BA</button>
+
+														<?php
+														}
+														else
+														{
+														$ket_ba ='No BA : ';
+														$ket_ba .=$nomor_ba;
+														$ket_ba .='-HP';
+														?>
+														<button type="button" class="btn btn-danger btn-sm"><i class='mdi mdi-file-pdf'></i> <?php echo $ket_ba; ?></button>
+
+														<?php
+														}
+														?>
+													
+											
+                              <br>
+                              <button type="button" class="btn btn-outline-primary btn-sm"><i class='mdi mdi-cart'></i>  <?php echo $status_; ?></button>
+                              <br>
+													<?php
+													if ($status == '1')
+													{
+													?>
+													<button type="button" class="btn btn-outline-dark"><i class='mdi mdi-cart-off'></i> Selesai Belanja</button>
+													<?php
+													}
+													else
+													{
+													?>
+													<?php echo ( "<a button type='button' class='btn btn-outline-success' href=assets/include/update-selesai-belanja.php?id=$data[0] title='Klik Disini jika anda sudah Selesai Belanja'> <i class='mdi mdi-cart-plus'></i>  Masih Shopping </a> </button>")?>	
+													<?php
+													}
+													?>
+													
+													
+													
+													
+													
 													</td>
                                                 <td>
 												<div class="btn-group">
 													<button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Action </button>
 													<div class="dropdown-menu">
-													 
+													  <?php
+													  if ($status=='1')
+														{
+													  												    
+														}
+														else
+														{
+														?>
 													    <?php echo ( "<a class='dropdown-item' href=Input-SPK-Step-Three.php?KODE=$data[0] title='Edit SPK'> <i class='mdi mdi-cart-plus'></i> Belanja Barang</a>")?> 
-														<?php echo ( "<a class='dropdown-item' href=update-spk.php?kd=$data[0] title='Edit SPK'> <i class='mdi mdi-pencil'></i> Edit SPO/SPK</a>")?> 
+                            <?php echo ( "<a class='dropdown-item' href=update-spk.php?kd=$data[0] title='Edit SPK'> <i class='mdi mdi-pencil'></i> Edit SPO/SPK</a>")?> 
+														<?php
+														}
+														?>
+														
 														 <?php
 													  if ($data_dis_==0)
 														{
@@ -215,11 +335,7 @@ include "assets/include/koneksi.php";
 														<?php
 														}
 														?>
-														
-														
-														
-														
-																				  </div>
+												  </div>
 												</div><!-- /btn-group -->												</td>
                   </tr>
               
@@ -232,12 +348,12 @@ include "assets/include/koneksi.php";
                                         <tfoot>
                                             <tr>
                                             <tr>
-                                              <th width="3%">NO</th>
-                                                <th width="20%">PPTK</th>
-                                                <th width="15%">DISTRIBUTOR </th>
-												<th width="25%">DISKRIPSI </th>
-												<th width="15%">TANGGAL</th>
-												<th width="15%">KET.</th>
+                                               <th width="3%">NO</th>
+                                                <th width="17%">PPTK</th>
+                                                <th width="10%">DISTRIBUTOR </th>
+                                                <th width="25%">DISKRIPSI </th>
+                                                <th width="17%">TANGGAL</th>
+                                                <th width="17%">KET.</th>
                                                 <th width="10%">ACT</th>
                                             </tr>
                                         </tfoot>

@@ -24,7 +24,7 @@ if (isset($_SESSION['session_login_by_id'])){ //jika session loginnya ada maka l
 		{
 		//include("inc/cekyourlogin.php"); 
 		//echo "Anda Harus Login terlebih dahulu untuk mengakses halaman ini <p> <a href='index.php'>Kembali</a>";
-		exit();
+//		exit();
 		}
 			
 

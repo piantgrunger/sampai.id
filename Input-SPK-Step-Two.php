@@ -152,7 +152,16 @@ $yearsnow					= date("Y");
 									<div class="form-group row">
                                         <label for="cono1" class="col-sm-3 text-right control-label col-form-label">Untuk</label>
                                         <div class="col-sm-9">
-                                            <textarea required name="untuk" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Untuk" class="form-control"></textarea>
+                                           	<select name="untuk" class="select2 form-control custom-select" required style="width: 100%; height:36px;">
+                                                                                         		<option selected="selected">Pilih Salah Satu</option>
+
+												<option>Belanja Cetak</option>
+												<option>Belanja Peralatan dan Perlengkapan Komputer</option>
+												<option>Belanja Alat Tulis Kantor (ATK)</option>
+												<option>Belanja Perangko, Materai dan Benda Pos Lainnya </option>
+												<option>Belanja Obat-Obatan </option>
+											
+                                        	</select>
                                         </div>
                                     </div>
 									<div class="form-group row">

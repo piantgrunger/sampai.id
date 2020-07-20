@@ -1,9 +1,11 @@
 <?PHP
 include "assets/include/koneksi.php";
+
+date_default_timezone_set("Asia/Jakarta"); 
 $yearsnow	= date("Y");
 $tgl_now	= date("d-m-Y");
 
-$tgl_ultah	= date("m-d");
+$tgl_ultah	= date("d-m");
 
 
 $select_pengunjung 				="select * from buku_tamu";
@@ -39,6 +41,21 @@ $puas 			= $jumlah_select_1/$jumlah_select_ * 100;
 $kurangpuas 	= $jumlah_select_2/$jumlah_select_ * 100;
 
 $tidakpuas 		= $jumlah_select_3/$jumlah_select_ * 100;
+?>
+<?php
+    //Simpan Data Statistik Website
+    $ip      = $_SERVER['REMOTE_ADDR']; // Mendapatkan IP komputer user
+    $tanggal = date("Ymd"); // Mendapatkan tanggal sekarang
+    $waktu   = time(); // 
+    // Mencek berdasarkan IPnya, apakah user sudah pernah mengakses hari ini 
+    $s = mysqli_query("SELECT * FROM tbstatistik WHERE ip='$ip' AND tanggal='$tanggal'");
+    // Kalau belum ada, simpan data user tersebut ke database
+    if(mysqli_num_rows($s) == 0){
+    mysqli_query("INSERT INTO tbstatistik (id_statistik,ip, tanggal, hits, online) VALUES('', $ip','$tanggal','1','$waktu')");
+    } 
+    else{
+    mysqli_query("UPDATE tbstatistik SET hits=hits+1, online='$waktu' WHERE ip='$ip' AND tanggal='$tanggal'");
+    }
 ?>
 
 
@@ -148,6 +165,7 @@ function rupiah_2($angka){
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="refresh" content="10" />
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
@@ -229,13 +247,12 @@ function rupiah_2($angka){
 						
 						
 						
-						
 						</h4>
                         <div class="ml-auto text-right">
                             <nav aria-label="breadcrumb">
                                 <ol class="breadcrumb">
                                     <li class="breadcrumb-item"><a href="#">Home</a></li>
-                                    <li class="breadcrumb-item active" aria-current="page">Library</li>
+                                    <li class="breadcrumb-item active" aria-current="page">BKPP BJB</li>
                                 </ol>
                             </nav>
                         </div>
@@ -260,7 +277,7 @@ function rupiah_2($angka){
 					<?php				
 
 				 	$i 			= 1;
-              	 	$jml_data1 	= "SELECT * FROM acara where tanggal = '$tgl_now'  and status ='Proses' order by tanggal ";
+          $jml_data1 	= "SELECT * FROM acara where tanggal = '$tgl_now'  and status ='Proses' order by tanggal ";
 					$query		= mysqli_query($conn, $jml_data1);
 					$jml_agenda = mysqli_num_rows($query);
 					
@@ -470,7 +487,7 @@ function rupiah_2($angka){
                                 <div class="alert alert-success" role="alert">
 								<?php
 								$i 			= 1;
-								$select_pegawai 		="select * from pegawai where tgl_lahir LIKE '$tgl_ultah%' order by level ";
+								$select_pegawai 		  ="select * from pegawai where tgl_lahir LIKE '$tgl_ultah%' order by level ";
 								$mysql_select_pegawai	= mysqli_query($conn, $select_pegawai);
 								
 								$jumlah_select_peg		= mysqli_num_rows($mysql_select_pegawai);
@@ -534,7 +551,6 @@ function rupiah_2($angka){
 									 $i++;
 										}
 									?>
-								  
 								  </p>
                                 </div>
                               

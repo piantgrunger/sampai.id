@@ -107,6 +107,7 @@ include "assets/include/koneksi.php";
                                            		<option>Admin</option>
 												<option>Admin Persediaan</option>
 												<option>Admin Sub Bidang</option>
+                        <option>Admin Anjab</option>                      
                                         	</select>
                                         </div>
                                     </div>

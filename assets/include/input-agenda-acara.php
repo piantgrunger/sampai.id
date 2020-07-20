@@ -11,12 +11,15 @@ $keterangan	 			= $_POST['keterangan'];
 
 $a1 					= strtoupper($acara);
 $a2		 				= strtoupper($tempat);
-$sql1					= "insert acara  values('','$a1', '$hari','$tanggal','$waktu','$a2','$id_pegawai','$keterangan','Proses'  )";
+$sql1					= "insert into acara (acara,hari,tanggal,waktu,tempat,id_pegawai,keterangan,status) values('$a1', '$hari','$tanggal','$waktu','$a2','$id_pegawai','$keterangan','Proses'  )";
 $sql 					= mysqli_query($conn, $sql1);
+
+
+
 if ($sql){
 header("location:../../Data-Agenda.php?pesan=1&isi=Berhasil Menambahkan Agenda Acara  $a1");
 }else{
-header("location:../../Data-Agenda.php?pesan=2&isi=Gagal Menambahkan Menambahkan Agenda Acara $a1 karena ".mysql_error());
+header("location:../../Data-Agenda.php?pesan=2&isi=Gagal Menambahkan Menambahkan Agenda Acara $a1 karena ".mysqli_error());
 }
 ?>
 

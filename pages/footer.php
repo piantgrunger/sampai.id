@@ -1,2 +1,4 @@
 <footer class="footer text-center">
-                Umum Kepegawaian  <a href="#">BKPP Banjarbaru</a>.            </footer>
+                Umum Kepegawaian  <a href="#">BKPP Banjarbaru</a>. 
+
+ </footer>
