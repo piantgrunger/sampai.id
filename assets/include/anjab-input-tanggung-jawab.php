@@ -3,7 +3,7 @@ include('koneksi.php');
 $id_jabatan 					= $_POST['id_jabatan'];
 $tanggungjawab					= $_POST['tanggungjawab'];
 
-$sql1					= "insert tanggungjawab values('','$id_jabatan','$tanggungjawab')";
+$sql1					= "insert tanggungjawab values(0,'$id_jabatan','$tanggungjawab')";
 $sql 					= mysqli_query($conn, $sql1);
 if ($sql)
 {

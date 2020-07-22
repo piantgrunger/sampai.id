@@ -134,7 +134,7 @@ if (isset($_POST['nama2'])){
 						//$insert_history	= "insert into history values ('','$download','$dari_u','$kepada','-','Surat Diterima','N','$tgl')";
 						//$insert_h = mysql_query($insert_history);
 						
-						$in_q ="INSERT INTO pegawai VALUES(NULL, 
+						$in_q ="INSERT INTO pegawai VALUES(0, 
 						'$nama1', 
 						'$name', 
 						'$nama3', 

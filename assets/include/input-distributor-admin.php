@@ -30,7 +30,7 @@ $rek_bank				= $_POST['rek_bank'];
 
 $a1 					= strtoupper($distributor);
 //$a2		 			= strtoupper($nama_akronim);
-$sql1					= "insert distributor  values('', '$a1','$nama_pemilik','$alamat', '$npwp','$rek_bank' )";
+$sql1					= "insert distributor  values(0, '$a1','$nama_pemilik','$alamat', '$npwp','$rek_bank' )";
 $sql 					= mysqli_query($conn, $sql1);
 if ($sql){
 header("location:../../Data-Distributor-Admin.php?pesan=1&isi=Berhasil Menambahkan Distributor Baru");

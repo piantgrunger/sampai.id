@@ -14,7 +14,7 @@ $tgll			= date("dmY");
 
 
 
-$sql1					= "insert cetak  values('','$id_pegawai', '$year','$nama_1'  )";
+$sql1					= "insert cetak  values(0,'$id_pegawai', '$year','$nama_1'  )";
 $sql 					= mysqli_query($conn, $sql1);
 if ($sql){
 header("location:../../Data-Pegawai.php?pesan=1&isi=Berhasil Mencetak Kartu Pegawai  Atas Nama $nama");

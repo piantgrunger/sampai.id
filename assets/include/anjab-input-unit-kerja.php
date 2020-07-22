@@ -10,7 +10,7 @@ $pelaksana							= $_POST['pelaksana'];
 $jft						= $_POST['jft'];
 
 
-$sql1					= "insert tb_unitkerja values('','$id_jabatan','$utama' ,'$madya','$pertama' ,'$administrator','$pengawas' ,'$pelaksana','$jft')";
+$sql1					= "insert tb_unitkerja values(0,'$id_jabatan','$utama' ,'$madya','$pertama' ,'$administrator','$pengawas' ,'$pelaksana','$jft')";
 $sql 					= mysqli_query($conn, $sql1);
 if ($sql)
 {

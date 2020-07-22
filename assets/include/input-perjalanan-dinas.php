@@ -104,7 +104,7 @@ $tgl_akhir 				.= $thn1;
 $a1 					= strtoupper($maksud);
 $a2		 				= strtoupper($tujuan);
 
-$sql1					= "insert sppd  values('', '$id_perjalanan','$id_pegawai', '$a1','$angkutan','BANJARBARU','$a2', '$lama','$tgl_awal','$tgl_akhir','$pengikut','$anggaran','$keterangan','$y_now','$tgl_ajuan','$id_unit_org_sppd','$no_sppd' )";
+$sql1					= "insert sppd  values(0, '$id_perjalanan','$id_pegawai', '$a1','$angkutan','BANJARBARU','$a2', '$lama','$tgl_awal','$tgl_akhir','$pengikut','$anggaran','$keterangan','$y_now','$tgl_ajuan','$id_unit_org_sppd','$no_sppd' )";
 $sql 					= mysqli_query($conn, $sql1);
 if ($sql){
 header("location:../../Data-SPPD.php?pesan=1&isi=Berhasil Menambahkan SPPD ");

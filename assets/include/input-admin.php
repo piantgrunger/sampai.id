@@ -70,7 +70,7 @@ if (isset($_POST['nama'])){
 						//$insert_history	= "insert into history values ('','$download','$dari_u','$kepada','-','Surat Diterima','N','$tgl')";
 						//$insert_h = mysql_query($insert_history);
 						
-						$in_q ="INSERT INTO users VALUES(NULL, 
+						$in_q ="INSERT INTO users VALUES(0, 
 						'$a11', 
 						'$password', 
 						'$email', 

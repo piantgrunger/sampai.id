@@ -101,7 +101,7 @@ $tgl_akhir 				.= $thn1;
 
 $a1 					= strtoupper($alasan);
 $a2		 				= strtoupper($alamat_cuti);
-$sql1					= "insert cuti  values('', '$id_cuti','$id_pegawai', '$lama_cuti','$tgl_awal','$tgl_akhir','$a1', '$a2','$telp','$tahun','Proses','$id_atasan','$tgl_ajuan','$no_cuti' )";
+$sql1					= "insert cuti  values(0, '$id_cuti','$id_pegawai', '$lama_cuti','$tgl_awal','$tgl_akhir','$a1', '$a2','$telp','$tahun','Proses','$id_atasan','$tgl_ajuan','$no_cuti' )";
 $sql 					= mysqli_query($conn, $sql1);
 if ($sql){
 header("location:../../Data-Cuti.php?pesan=1&isi=Berhasil Menambahkan Cuti dengan alasan $a1");

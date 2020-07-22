@@ -6,7 +6,7 @@ $jenis_jab 				= $_POST['jenis_jab'];
 $esselon_jab			= $_POST['esselon_jab'];
 
 $a1 					= strtoupper($nama_jabatan);
-$sql1					= "insert jabatan  values('','$a1', '$jenis_jab','$esselon_jab' )";
+$sql1					= "insert jabatan  values(0,'$a1', '$jenis_jab','$esselon_jab' )";
 $sql 					= mysqli_query($conn, $sql1);
 if ($sql){
 header("location:../../Data-pegawai.php?pesan=1&isi=Berhasil Menambahkan Jabatan Baru Dengan nama $a1");

@@ -4,7 +4,7 @@ $id_jabatan 				= $_POST['id_jabatan'];
 $temperamen					= $_POST['temperamen'];
 
 
-$sql1					= "insert temperamen values('','$id_jabatan','$temperamen')";
+$sql1					= "insert temperamen values(0,'$id_jabatan','$temperamen')";
 $sql 					= mysqli_query($conn, $sql1);
 if ($sql)
 {

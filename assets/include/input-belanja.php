@@ -22,7 +22,7 @@ $jumlah 					= $qty * $harga;
 
 
 
-$sql1					= "insert belanja_barang values('','$id_spk','$id_barang','$keterangan','$qty','$jumlah' )";
+$sql1					= "insert belanja_barang values(0,'$id_spk','$id_barang','$keterangan','$qty','$jumlah' )";
 $sql 					= mysqli_query($conn, $sql1);
 if ($sql)
 {

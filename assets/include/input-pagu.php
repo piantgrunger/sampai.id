@@ -17,7 +17,7 @@ header("location:../../Data-SPPD.php?pesan=2&isi=Gagal Menambahkan Jabatan Baru 
 }
 else
 {
-$sql1					= "insert pagu_sppd  values('','$id_unit_org_sppd', '$rp','$tahun' )";
+$sql1					= "insert pagu_sppd  values(0,'$id_unit_org_sppd', '$rp','$tahun' )";
 $sql 					= mysqli_query($conn, $sql1);
 if ($sql){
 //header("location:../../Data-SPPD.php?pesan=1&isi=Berhasil Menambahkan Jabatan Baru Dengan nama $a1");

@@ -5,7 +5,7 @@ $bahaya						= $_POST['bahaya'];
 $penyebab					= $_POST['penyebab'];
 
 
-$sql1					= "insert risiko values('','$id_jabatan','$bahaya' ,'$penyebab')";
+$sql1					= "insert risiko values(0,'$id_jabatan','$bahaya' ,'$penyebab')";
 $sql 					= mysqli_query($conn, $sql1);
 if ($sql)
 {

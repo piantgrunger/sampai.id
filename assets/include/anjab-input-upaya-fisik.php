@@ -4,7 +4,7 @@ $id_jabatan 				= $_POST['id_jabatan'];
 $upaya						= $_POST['upaya'];
 
 
-$sql1					= "insert upaya_fisik values('','$id_jabatan','$upaya')";
+$sql1					= "insert upaya_fisik values(0,'$id_jabatan','$upaya')";
 $sql 					= mysqli_query($conn, $sql1);
 if ($sql)
 {

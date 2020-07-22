@@ -80,7 +80,7 @@ header("location:../../Data-SPPD.php?pesan=2&isi=Gagal Menambahkan Jabatan Baru 
 }
 else
 {
-$sql1					= "insert panjar values('','$id_sppd','$klasifikasi','$rincian','$jumlah','$tgl_ajuan','Panjar' )";
+$sql1					= "insert panjar values(0,'$id_sppd','$klasifikasi','$rincian','$jumlah','$tgl_ajuan','Panjar' )";
 $sql 					= mysqli_query($conn, $sql1);
 if ($sql){
 header("location:../../Panjar-SPPD.php?id=$id_sppd");

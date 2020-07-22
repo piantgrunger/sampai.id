@@ -81,7 +81,7 @@ $y_now					= date("Y");
 
 
 
-$sql1					= "insert rampung values('','$id_sppd','$klasifikasi','$rincian','$qty','$harga','$satuan','$tgl_ajuan','$jumlah','-','$id_unit_sppd')";
+$sql1					= "insert rampung values(0,'$id_sppd','$klasifikasi','$rincian','$qty','$harga','$satuan','$tgl_ajuan','$jumlah','-','$id_unit_sppd')";
 $sql 					= mysqli_query($conn, $sql1);
 if ($sql)
 {

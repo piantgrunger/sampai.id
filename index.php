@@ -51,7 +51,7 @@ $tidakpuas 		= $jumlah_select_3/$jumlah_select_ * 100;
     $s = mysqli_query("SELECT * FROM tbstatistik WHERE ip='$ip' AND tanggal='$tanggal'");
     // Kalau belum ada, simpan data user tersebut ke database
     if(mysqli_num_rows($s) == 0){
-    mysqli_query("INSERT INTO tbstatistik (id_statistik,ip, tanggal, hits, online) VALUES('', $ip','$tanggal','1','$waktu')");
+    mysqli_query("INSERT INTO tbstatistik (id_statistik,ip, tanggal, hits, online) values(0, $ip','$tanggal','1','$waktu')");
     } 
     else{
     mysqli_query("UPDATE tbstatistik SET hits=hits+1, online='$waktu' WHERE ip='$ip' AND tanggal='$tanggal'");
