@@ -8,7 +8,7 @@ $benda						= $_POST['benda'];
 
 
 
-$sql1					= "insert fungsi_pekerjaan values('','$id_jabatan','$data','$orang','$benda')";
+$sql1					= "insert fungsi_pekerjaan values(0,'$id_jabatan','$data','$orang','$benda')";
 $sql 					= mysqli_query($conn, $sql1);
 if ($sql)
 {

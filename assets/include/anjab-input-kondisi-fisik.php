@@ -10,7 +10,7 @@ $penampilan						= $_POST['penampilan'];
 
 
 
-$sql1					= "insert kondisi_fisik values('','$id_jabatan','$jk','$umur','$tinggi','$berat','$postur','$penampilan')";
+$sql1					= "insert kondisi_fisik values(0,'$id_jabatan','$jk','$umur','$tinggi','$berat','$postur','$penampilan')";
 $sql 					= mysqli_query($conn, $sql1);
 if ($sql)
 {

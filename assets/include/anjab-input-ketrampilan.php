@@ -5,7 +5,7 @@ $keterampilan					= $_POST['keterampilan'];
 $tambahan						= $_POST['tambahan'];
 
 
-$sql1					= "insert keterampilan values('','$id_jabatan','$keterampilan' ,'$tambahan')";
+$sql1					= "insert keterampilan values(0,'$id_jabatan','$keterampilan' ,'$tambahan')";
 $sql 					= mysqli_query($conn, $sql1);
 if ($sql)
 {

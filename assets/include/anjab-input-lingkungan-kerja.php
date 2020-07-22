@@ -12,7 +12,7 @@ $keadaan					= $_POST['keadaan'];
 $getaran					= $_POST['getaran'];
 
 
-$sql1					= "insert lingkungan_kerja values('','$id_jabatan','$tempat','$suhu','$udara','$ruangan','$letak','$penerangan','$suara','$keadaan','$getaran')";
+$sql1					= "insert lingkungan_kerja values(0,'$id_jabatan','$tempat','$suhu','$udara','$ruangan','$letak','$penerangan','$suara','$keadaan','$getaran')";
 $sql 					= mysqli_query($conn, $sql1);
 if ($sql)
 {

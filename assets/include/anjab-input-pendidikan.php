@@ -3,7 +3,7 @@ include('koneksi.php');
 $id_jabatan 					= $_POST['id_jabatan'];
 $pendidikan						= $_POST['pendidikan'];
 
-$sql1					= "insert pendidikan values('','$id_jabatan','$pendidikan')";
+$sql1					= "insert pendidikan values(0,'$id_jabatan','$pendidikan')";
 $sql 					= mysqli_query($conn, $sql1);
 if ($sql)
 {

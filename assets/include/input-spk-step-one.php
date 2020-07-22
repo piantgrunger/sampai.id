@@ -166,12 +166,13 @@ $tahun					= date("Y");
 
 //$a1 					= strtoupper($nama_kantor);
 //$a2		 			= strtoupper($nama_akronim);
-$sql1					= "insert spk  values('', '$id_admin','$id_distributor','$id_jabatan', '$untuk','$keperluan','$hari','$tgl_awal','$tgl_ajuan','$code','$nomor_spk','','$tahun','$id_klasifikasi' ,'$jenis','$n_bulan' ,'0')";
+$sql1					= "insert spk (id_user,id_distributor,id_pejabat, untuk,keperluan,hari,tgl_serah,tgl_buat,kd_unik,nomor_spk,nomor_ba,tahun,id_klasifikasi ,jenis,n_bulan,status)  values( '$id_admin','$id_distributor','$id_jabatan', '$untuk','$keperluan','$hari','$tgl_awal','$tgl_ajuan','$code','$nomor_spk','','$tahun','$id_klasifikasi' ,'$jenis','$n_bulan' ,'0')";
+//die($sql1);
 $sql 					= mysqli_query($conn, $sql1);
 if ($sql){
 header("location:../../Data-SPK.php?pesan=1&isi=Berhasil Menambahkan Surat Perintah Kerja (SPK)");
 }else{
-header("location:../../Data-SPK.php?pesan=2&isi=Gagal Menambahkan Surat Perintah Kerja (SPK) karena ".mysql_error());
+header("location:../../Data-SPK.php?pesan=2&isi=Gagal Menambahkan Surat Perintah Kerja (SPK) karena ".mysqli_error($conn));
 }
 ?>
 

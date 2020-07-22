@@ -4,7 +4,7 @@ $id_jabatan 					= $_POST['id_jabatan'];
 $bakat						= $_POST['bakat'];
 
 
-$sql1					= "insert bakat values('','$id_jabatan','$bakat')";
+$sql1					= "insert bakat values(0,'$id_jabatan','$bakat')";
 $sql 					= mysqli_query($conn, $sql1);
 if ($sql)
 {

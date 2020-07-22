@@ -3,7 +3,7 @@ include('koneksi.php');
 $id_jabatan 					= $_POST['id_jabatan'];
 $diklat							= $_POST['diklat'];
 
-$sql1					= "insert diklat_teknis values('','$id_jabatan','$diklat')";
+$sql1					= "insert diklat_teknis values(0,'$id_jabatan','$diklat')";
 $sql 					= mysqli_query($conn, $sql1);
 if ($sql)
 {

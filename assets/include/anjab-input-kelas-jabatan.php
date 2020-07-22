@@ -5,7 +5,7 @@ $prestasi						= $_POST['prestasi'];
 $kelas							= $_POST['kelas'];
 
 
-$sql1					= "insert kelas_jabatan values('','$id_jabatan','$kelas' ,'$prestasi')";
+$sql1					= "insert kelas_jabatan values(0,'$id_jabatan','$kelas' ,'$prestasi')";
 $sql 					= mysqli_query($conn, $sql1);
 if ($sql)
 {

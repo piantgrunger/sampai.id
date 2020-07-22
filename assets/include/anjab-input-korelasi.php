@@ -5,7 +5,7 @@ $jabatan_					= $_POST['jabatan_'];
 $unitkerja					= $_POST['unitkerja'];
 $hal						= $_POST['hal'];
 
-$sql1					= "insert korelasi values('','$id_jabatan','$jabatan_','$unitkerja','$hal')";
+$sql1					= "insert korelasi values(0,'$id_jabatan','$jabatan_','$unitkerja','$hal')";
 $sql 					= mysqli_query($conn, $sql1);
 if ($sql)
 {

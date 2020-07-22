@@ -15,7 +15,7 @@ $hitung							= $waktu * $beban / 75000;
 
 
 
-$sql1					= "insert tugas_pokok values('','$id_jabatan','$uraian','$satuan','$beban','$waktu','$hitung','$hasil','$bahan','$digunakan_1','$perangkat','$digunakan_2')";
+$sql1					= "insert tugas_pokok values(0,'$id_jabatan','$uraian','$satuan','$beban','$waktu','$hitung','$hasil','$bahan','$digunakan_1','$perangkat','$digunakan_2')";
 $sql 					= mysqli_query($conn, $sql1);
 if ($sql)
 {
